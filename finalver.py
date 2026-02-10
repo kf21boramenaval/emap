@@ -285,17 +285,10 @@ m = folium.Map(
 
 # 2. 배경 레이어를 별도로 추가 (control=False로 메뉴에서 숨김)
 folium.TileLayer(
-    tiles='https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
-    attr='&copy; CARTO',
-    name='Dark mode', # 사실 숨길 거라 이름은 아무거나 해도 됩니다.
-    control=True         # <- 이 녀석이 범인 검거의 핵심! (메뉴에 안 뜸)
-).add_to(m)
-
-folium.TileLayer(
     tiles='https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
     attr='&copy; CARTO',
-    name='Light mode', # 라이트 모드 위에는 다크모드로
-    control=True       # 레이어는 위에서 아래로 아래가 기본 레이어, False하면 아예 안뜬다
+    name='CartoDB Light', # 사실 숨길 거라 이름은 아무거나 해도 됩니다.
+    control=False         # <- 이 녀석이 범인 검거의 핵심! (메뉴에 안 뜸)
 ).add_to(m)
 
 
@@ -325,7 +318,7 @@ ranking_box_html = """
 <style>
     #ranking-toggle {
         position: absolute;
-        top: 140px; 
+        top: 80px;
         right: 10px;
         background: rgba(255, 255, 255, 0.95);
         border: 2px solid #59b0c3;
