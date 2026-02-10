@@ -182,8 +182,8 @@ print(f"🎊 작전 종료! 574개 전 구역 점령 완료! 으하하하!")
 
 # UTC 기준으로 2시간을 더합니다! (UTC+2)
 # 만약 UTC-5를 원하시면 hours=-5 로 바꾸면 끝! 으흐흐
-target_time = datetime.now(timezone.utc) + timedelta(hours=-8)
-update_time = target_time.strftime('%Y-%m-%d %H:%M') + " (UTC-8)"
+target_time = datetime.now(timezone.utc) + timedelta(hours=9)
+update_time = target_time.strftime('%Y-%m-%d %H:%M') + " (UTC+9)"
 
 # 1. 데이터 로드
 df = pd.read_csv('erepregiondata.csv', encoding='utf-8-sig')
