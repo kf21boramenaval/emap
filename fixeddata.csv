@@ -1,0 +1,575 @@
+region id,original country,city id,city,lat,lon,region,resources,neighbours,region link
+3,Romania,112,Constanta,44.1733333,28.6383333,Dobrogea,"Magnesium, Cobalt, Titanium, Wolfram","Muntenia, Bassarabia, Varna, Southern Basarabia, Black Sea Coast of Turkey, Taurida",https://www.erepublik.com/en/main/region/Dobrogea
+5,Romania,5,Bucharest,44.437711,26.0973669,Muntenia,,"Dobrogea, Oltenia, Ruse, Transilvania, Moldova, Varna",https://www.erepublik.com/en/main/region/Muntenia
+9,Romania,120,Craiova,44.32476,23.813471,Oltenia,,"Muntenia, Transilvania, Banat, Vidin, Ruse, Eastern Serbia",https://www.erepublik.com/en/main/region/Oltenia
+11,Romania,115,Timisoara,45.755539,21.237499,Banat,,"Crisana, Southern Great Plain, Transilvania, Oltenia, Vojvodina, Eastern Serbia",https://www.erepublik.com/en/main/region/Banat
+35,Romania,116,Cluj-Napoca,46.777248,23.5998899,Transilvania,"Grain, Fruits, Cattle, Deer","Maramures, Crisana, Bucovina, Moldova, Muntenia, Oltenia, Banat",https://www.erepublik.com/en/main/region/Transilvania
+36,Romania,121,Oradea,47.0722222,21.9211111,Crisana,,"Maramures, Transilvania, Banat, Northern Great Plain, Southern Great Plain",https://www.erepublik.com/en/main/region/Crisana
+37,Romania,114,Iasi,47.1569444,27.5902778,Moldova,"Aluminum, Oil","Bucovina, Chisinau, Transilvania, Southern Basarabia, Muntenia, Northern Basarabia",https://www.erepublik.com/en/main/region/Moldova
+38,Romania,253,Baia Mare,47.6666667,23.5833333,Maramures,,"Transilvania, Crisana, Subcarpathia, Northern Great Plain, Bucovina, Bukovyna",https://www.erepublik.com/en/main/region/Maramures
+39,Romania,252,Botosani,47.746231,26.666809,Bucovina,,"Moldova, Bukovyna, Northern Basarabia, Maramures, Transilvania",https://www.erepublik.com/en/main/region/Bucovina
+40,USA,188,Montgomery,32.3668052,-86.2999689,Alabama,,"Mississippi, Georgia, Florida, Tennessee",https://www.erepublik.com/en/main/region/Alabama
+41,USA,211,Juneau,58.3019444,-134.4197222,Alaska,,"Yukon, British Columbia, Far Eastern Russia, Washington, Hokkaido",https://www.erepublik.com/en/main/region/Alaska
+42,USA,175,Phoenix,33.4483771,-112.0740373,Arizona,,"New Mexico, Utah, California, Northwest of Mexico, Nevada",https://www.erepublik.com/en/main/region/Arizona
+43,USA,185,Little Rock,34.7464809,-92.2895948,Arkansas,,"Mississippi, Missouri, Tennessee, Oklahoma, Louisiana, Texas",https://www.erepublik.com/en/main/region/Arkansas
+44,USA,173,Sacramento,38.5815719,-121.4943996,California,,"Nevada, Arizona, Oregon, Baja, Hawaii, Northwest of Mexico",https://www.erepublik.com/en/main/region/California
+45,USA,32,Denver,39.737567,-104.9847179,Colorado,,"Utah, Wyoming, New Mexico, Nebraska, Kansas, Oklahoma",https://www.erepublik.com/en/main/region/Colorado
+46,USA,203,Hartford,41.7637111,-72.6850932,Connecticut,,"New York, Rhode Island, Shannon, Cork, Wales, South West of England, Massachusetts",https://www.erepublik.com/en/main/region/Connecticut
+47,USA,196,Dover,39.158168,-75.5243682,Delaware,,"Maryland, Pennsylvania, New Jersey, Pays de la Loire, Brittany",https://www.erepublik.com/en/main/region/Delaware
+48,USA,189,Tallahassee,30.4382559,-84.2807329,Florida,,"Alabama, Georgia, Mississippi, Western Cuba, Las Villas",https://www.erepublik.com/en/main/region/Florida
+49,USA,37,Atlanta,33.7489954,-84.3879824,Georgia,,"South Carolina, Alabama, Tennessee, Florida, Galicia, Azores, North Carolina",https://www.erepublik.com/en/main/region/Georgia
+50,USA,212,Honolulu,21.3069444,-157.8583333,Hawaii,,"Kyushu, California, Eastern Taiwan, Visayas, Papua",https://www.erepublik.com/en/main/region/Hawaii
+51,USA,171,Boise,43.613739,-116.237651,Idaho,,"Utah, Montana, Oregon, Washington, British Columbia, Nevada, Wyoming",https://www.erepublik.com/en/main/region/Idaho
+52,USA,199,Springfield,39.80172,-89.64371,Illinois,,"Indiana, Missouri, Wisconsin, Iowa, Kentucky",https://www.erepublik.com/en/main/region/Illinois
+53,USA,198,Indianapolis,39.7685155,-86.1580736,Indiana,,"Ohio, Kentucky, Illinois, Michigan",https://www.erepublik.com/en/main/region/Indiana
+54,USA,183,Des Moines,41.6005448,-93.6091064,Iowa,,"Missouri, Nebraska, Wisconsin, Minnesota, Illinois, South Dakota",https://www.erepublik.com/en/main/region/Iowa
+55,USA,213,Topeka,39.0558235,-95.6890185,Kansas,,"Missouri, Nebraska, Oklahoma, Colorado",https://www.erepublik.com/en/main/region/Kansas
+56,USA,193,Frankfort,38.2009055,-84.8732835,Kentucky,"Saltpeter, Aluminum, Oil, Rubber","West Virginia, Ohio, Tennessee, Indiana, Virginia, Illinois, Missouri",https://www.erepublik.com/en/main/region/Kentucky
+57,USA,186,Baton Rouge,30.4582829,-91.1403196,Louisiana,,"Texas, Mississippi, Arkansas",https://www.erepublik.com/en/main/region/Louisiana
+58,USA,217,Augusta,44.31062,-69.77949,Maine,,"New Hampshire, Quebec, New Brunswick, Nova Scotia, Shannon, Cork, Wales, South West of England",https://www.erepublik.com/en/main/region/Maine
+59,USA,195,Annapolis,38.9784453,-76.4921829,Maryland,,"District of Columbia, Delaware, Pennsylvania, Aquitaine, Poitou Charentes, Virginia, West Virginia",https://www.erepublik.com/en/main/region/Maryland
+60,USA,206,Boston,42.3584308,-71.0597732,Massachusetts,,"Rhode Island, New Hampshire, Shannon, Cork, Wales, South West of England, New York, Vermont, Connecticut",https://www.erepublik.com/en/main/region/Massachusetts
+61,USA,201,Lansing,42.732535,-84.5555347,Michigan,,"Ohio, Indiana, Wisconsin, Ontario, Manitoba, Minnesota",https://www.erepublik.com/en/main/region/Michigan
+62,USA,182,Saint Paul,44.9537029,-93.0899578,Minnesota,,"Wisconsin, South Dakota, Iowa, Manitoba, Saskatchewan, North Dakota, Michigan",https://www.erepublik.com/en/main/region/Minnesota
+63,USA,187,Jackson,32.2987573,-90.1848103,Mississippi,,"Louisiana, Alabama, Arkansas, Tennessee, Florida",https://www.erepublik.com/en/main/region/Mississippi
+64,USA,184,Jefferson City,38.5767017,-92.1735164,Missouri,,"Iowa, Arkansas, Kansas, Illinois, Oklahoma, Kentucky, Tennessee, Nebraska",https://www.erepublik.com/en/main/region/Missouri
+65,USA,170,Helena,46.5958056,-112.0270306,Montana,,"Idaho, North Dakota, Wyoming, British Columbia, Saskatchewan, Alberta, South Dakota",https://www.erepublik.com/en/main/region/Montana
+66,USA,180,Lincoln,40.806862,-96.681679,Nebraska,,"Iowa, Colorado, Kansas, South Dakota, Missouri, Wyoming",https://www.erepublik.com/en/main/region/Nebraska
+67,USA,174,Carson City,39.1637984,-119.7674034,Nevada,,"Utah, California, Oregon, Arizona, Idaho",https://www.erepublik.com/en/main/region/Nevada
+68,USA,207,Concord,43.20814,-71.53757,New Hampshire,,"Massachusetts, Vermont, Maine, Quebec",https://www.erepublik.com/en/main/region/New-Hampshire
+69,USA,210,Trenton,40.2170534,-74.7429384,New Jersey,,"Delaware, Pennsylvania, Wales, South West of England, Pays de la Loire, Brittany, New York",https://www.erepublik.com/en/main/region/New-Jersey
+70,USA,177,Santa Fe,35.6869752,-105.937799,New Mexico,,"Colorado, Oklahoma, Arizona, Northwest of Mexico, Texas",https://www.erepublik.com/en/main/region/New-Mexico
+71,USA,204,Albany,42.6525793,-73.7562317,New York,,"Vermont, Connecticut, Ontario, Quebec, Shannon, Cork, Wales, South West of England, Pennsylvania, Massachusetts, New Jersey",https://www.erepublik.com/en/main/region/New-York
+72,USA,192,Raleigh,35.772096,-78.6386145,North Carolina,,"South Carolina, Virginia, Aquitaine, Tennessee, Georgia",https://www.erepublik.com/en/main/region/North-Carolina
+73,USA,28,Bismarck,46.8083268,-100.7837392,North Dakota,,"Montana, South Dakota, Saskatchewan, Minnesota",https://www.erepublik.com/en/main/region/North-Dakota
+74,USA,197,Columbus,39.9611755,-82.9987942,Ohio,,"West Virginia, Kentucky, Indiana, Michigan, Ontario, Pennsylvania",https://www.erepublik.com/en/main/region/Ohio
+75,USA,179,Oklahoma City,35.4675602,-97.5164276,Oklahoma,,"Texas, Arkansas, Missouri, Kansas, New Mexico, Colorado",https://www.erepublik.com/en/main/region/Oklahoma
+76,USA,172,Salem,44.9429,-123.0351,Oregon,,"Idaho, Washington, California, Nevada",https://www.erepublik.com/en/main/region/Oregon
+77,USA,202,Harrisburg,40.2737002,-76.8844179,Pennsylvania,,"Maryland, Delaware, New Jersey, Ontario, Ohio, West Virginia, New York",https://www.erepublik.com/en/main/region/Pennsylvania
+78,USA,205,Providence,41.8239891,-71.4128343,Rhode Island,,"Massachusetts, Connecticut, Shannon, Cork, Wales, South West of England",https://www.erepublik.com/en/main/region/Rhode-Island
+79,USA,190,Columbia,34.0007104,-81.0348144,South Carolina,,"North Carolina, Georgia, Galicia",https://www.erepublik.com/en/main/region/South-Carolina
+80,USA,181,Pierre,44.3683156,-100.3509665,South Dakota,,"Wyoming, Nebraska, North Dakota, Minnesota, Iowa, Montana",https://www.erepublik.com/en/main/region/South-Dakota
+81,USA,191,Nashville,36.1666667,-86.7833333,Tennessee,,"Kentucky, Arkansas, Alabama, Georgia, Virginia, North Carolina, Mississippi, Missouri",https://www.erepublik.com/en/main/region/Tennessee
+82,USA,178,Austin,30.267153,-97.7430608,Texas,,"Oklahoma, Louisiana, Northeast of Mexico, Northwest of Mexico, Arkansas, New Mexico",https://www.erepublik.com/en/main/region/Texas
+83,USA,33,Salt Lake City,40.7607793,-111.8910474,Utah,,"Colorado, Idaho, Nevada, Wyoming, Arizona",https://www.erepublik.com/en/main/region/Utah
+84,USA,209,Montpelier,44.2600593,-72.5753869,Vermont,,"New York, New Hampshire, Quebec, Massachusetts",https://www.erepublik.com/en/main/region/Vermont
+85,USA,27,Richmond,37.5407246,-77.4360481,Virginia,"Grain, Fruits, Cattle, Deer","District of Columbia, West Virginia, North Carolina, Aquitaine, Asturias, Cantabria, Maryland, Tennessee, Kentucky",https://www.erepublik.com/en/main/region/Virginia
+86,USA,215,Olympia,47.0378741,-122.9006951,Washington,,"Oregon, Idaho, British Columbia, Alaska",https://www.erepublik.com/en/main/region/Washington
+87,USA,194,Charleston,38.34982,-81.63262,West Virginia,Iron,"Virginia, Ohio, Kentucky, Maryland, Pennsylvania",https://www.erepublik.com/en/main/region/West-Virginia
+88,USA,200,Madison,43.0730517,-89.4012302,Wisconsin,,"Iowa, Michigan, Minnesota, Illinois",https://www.erepublik.com/en/main/region/Wisconsin
+89,USA,176,Cheyenne,41.1399814,-104.8202462,Wyoming,,"Colorado, Utah, South Dakota, Montana, Idaho, Nebraska",https://www.erepublik.com/en/main/region/Wyoming
+90,USA,24,Washington D.C.,38.8951118,-77.0363658,District of Columbia,Fish,"Virginia, Maryland",https://www.erepublik.com/en/main/region/District-of-Columbia
+91,Republic of Moldova,271,Balti,47.75494,27.913,Northern Basarabia,"Fish, Iron","Chisinau, Bucovina, Transnistria, Podolia, Bukovyna, Moldova",https://www.erepublik.com/en/main/region/Northern-Basarabia
+92,Republic of Moldova,274,Chisinau,47.026859,28.841551,Chisinau,"Fish, Iron, Magnesium","Northern Basarabia, Southern Basarabia, Moldova, Transnistria",https://www.erepublik.com/en/main/region/Chisinau
+93,Republic of Moldova,272,Cahul,45.9075,28.19444,Southern Basarabia,"Iron, Limestone","Chisinau, Transnistria, Moldova, Dobrogea, Bassarabia",https://www.erepublik.com/en/main/region/Southern-Basarabia
+94,Republic of Moldova,273,Tiraspol,46.845238,29.633101,Transnistria,"Sand, Clay, Wood","Bassarabia, Southern Basarabia, Northern Basarabia, Chisinau, Podolia",https://www.erepublik.com/en/main/region/Transnistria
+95,Canada,19,Ottawa,45.4215296,-75.6971931,Ontario,,"Quebec, New York, Michigan, Ohio, Pennsylvania, Manitoba",https://www.erepublik.com/en/main/region/Ontario
+96,Canada,226,Charlottetown,46.23824,-63.1310704,Prince Edward Island,,"New Brunswick, Nova Scotia, Newfoundland and Labrador",https://www.erepublik.com/en/main/region/Prince-Edward-Island
+97,Canada,22,Edmonton,53.544389,-113.4909267,Alberta,,"British Columbia, Northwest Territories, Saskatchewan, Montana",https://www.erepublik.com/en/main/region/Alberta
+98,Canada,223,Fredericton,45.9635895,-66.6431151,New Brunswick,,"Prince Edward Island, Quebec, Nova Scotia, Maine",https://www.erepublik.com/en/main/region/New-Brunswick
+99,Canada,222,Halifax,44.6488625,-63.5753196,Nova Scotia,,"Prince Edward Island, New Brunswick, Maine, Pays de la Loire, Brittany, Newfoundland and Labrador",https://www.erepublik.com/en/main/region/Nova-Scotia
+100,Canada,21,Quebec City,46.816667,-71.216667,Quebec,,"Ontario, New Brunswick, Vermont, New York, New Hampshire, Maine, Newfoundland and Labrador, Nunavut",https://www.erepublik.com/en/main/region/Quebec
+101,Canada,220,Regina,50.4547222,-104.6066667,Saskatchewan,,"Alberta, Manitoba, Montana, North Dakota, Northwest Territories, Minnesota",https://www.erepublik.com/en/main/region/Saskatchewan
+102,Canada,224,St. Johns,47.5605413,-52.7128315,Newfoundland and Labrador,,"Prince Edward Island, Nunavut, Mayo, Shannon, Cork, Scotland, Wales, South West of England, Quebec, Nova Scotia, Azores",https://www.erepublik.com/en/main/region/Newfoundland
+103,Canada,219,Victoria,48.4284207,-123.3656444,British Columbia,,"Alberta, Yukon, Washington, Alaska, Idaho",https://www.erepublik.com/en/main/region/British-Columbia
+104,Canada,23,Whitehorse,60.7211871,-135.0568449,Yukon,"Grain, Deer","Alaska, British Columbia, Northwest Territories",https://www.erepublik.com/en/main/region/Yukon
+105,Canada,221,Winnipeg,49.8997541,-97.1374937,Manitoba,,"Saskatchewan, Minnesota, Ontario, Nunavut, Michigan",https://www.erepublik.com/en/main/region/Manitoba
+106,Canada,218,Yellowknife,62.4539717,-114.3717886,Northwest Territories,"Iron, Saltpeter, Aluminum, Oil","Alberta, Yukon, Nunavut, Saskatchewan",https://www.erepublik.com/en/main/region/Northwest-Territories
+107,Canada,275,Iqaluit,63.746693,-68.5169669,Nunavut,"Rubber, Granite, Neodymium, Cobalt","Newfoundland and Labrador, Manitoba, Quebec, Northwest Territories",https://www.erepublik.com/en/main/region/Nunavut
+108,Hungary,131,Gyor,47.684051,17.6351011,Western Transdanubia,"Fish, Fruits, Cattle","Central Transdanubia, Bratislava, Burgenland, Southern Transdanubia, Western Slovakia, Northwest Croatia, Prekmurje",https://www.erepublik.com/en/main/region/Western-Transdanubia
+109,Hungary,132,Pecs,46.0712989,18.2331874,Southern Transdanubia,"Magnesium, Titanium, Wolfram","Southern Great Plain, Central Transdanubia, Western Transdanubia, Slavonia",https://www.erepublik.com/en/main/region/Southern-Transdanubia
+110,Hungary,276,Szekesfehervar,47.1887157,18.4138088,Central Transdanubia,"Fruits, Cattle, Iron, Aluminum","Central Hungary, Western Transdanubia, Southern Transdanubia, Southern Great Plain, Western Slovakia",https://www.erepublik.com/en/main/region/Central-Transdanubia
+111,Hungary,12,Budapest,47.4984056,19.0407578,Central Hungary,,"Central Transdanubia, Northern Hungary, Northern Great Plain, Southern Great Plain, Western Slovakia",https://www.erepublik.com/en/main/region/Central-Hungary
+112,Hungary,129,Miskolc,48.1043854,20.7913563,Northern Hungary,,"Central Hungary, Northern Great Plain, Eastern Slovakia, Central Slovakia, Subcarpathia",https://www.erepublik.com/en/main/region/Northern-Hungary
+113,Hungary,128,Debrecen,47.5299739,21.6393571,Northern Great Plain,,"Northern Hungary, Southern Great Plain, Crisana, Maramures, Central Hungary, Subcarpathia",https://www.erepublik.com/en/main/region/Northern-Great-Plain
+114,Hungary,130,Szeged,46.2536169,20.1461345,Southern Great Plain,,"Southern Transdanubia, Northern Great Plain, Banat, Crisana, Central Hungary, Central Transdanubia, Vojvodina, Slavonia",https://www.erepublik.com/en/main/region/Southern-Great-Plain
+115,Mexico,53,Mexico City,19.4326077,-99.133208,Valley of Mexico,"Fish, Cattle","Oaxaca, Pacific Coast of Mexico, Northwest of Mexico, Northeast of Mexico, Gulf of Mexico",https://www.erepublik.com/en/main/region/Valley-of-Mexico
+116,Mexico,277,Mexicali,32.6455704,-115.4453421,Baja,,"Northwest of Mexico, California",https://www.erepublik.com/en/main/region/Baja
+117,Mexico,278,Culiacan,24.8048499,-107.385498,Northwest of Mexico,Titanium,"Northeast of Mexico, Baja, Arizona, New Mexico, Pacific Coast of Mexico, Texas, California, Valley of Mexico",https://www.erepublik.com/en/main/region/Northwest-of-Mexico
+118,Mexico,582,Guadalajara,20.666667,-103.35,Pacific Coast of Mexico,Iron,"Valley of Mexico, Northwest of Mexico, Oaxaca",https://www.erepublik.com/en/main/region/Pacific-Coast-of-Mexico
+119,Mexico,279,Oaxaca,17.0833333,-96.75,Oaxaca,,"Valley of Mexico, Gulf of Mexico, Southeast of Mexico, Pacific Coast of Mexico",https://www.erepublik.com/en/main/region/Oaxaca
+120,Mexico,280,Veracruz,19.2,-96.13333,Gulf of Mexico,,"Oaxaca, Southeast of Mexico, Valley of Mexico, Northeast of Mexico",https://www.erepublik.com/en/main/region/Gulf-of-Mexico
+121,Mexico,281,Campeche,18.931225,-90.2618068,Southeast of Mexico,,"Gulf of Mexico, Oaxaca, Caribe e Insular, Western Cuba, Las Villas",https://www.erepublik.com/en/main/region/Southeast-of-Mexico
+122,Mexico,55,Monterrey,25.6732109,-100.309201,Northeast of Mexico,,"Northwest of Mexico, Texas, Valley of Mexico, Gulf of Mexico",https://www.erepublik.com/en/main/region/Northeast-of-Mexico
+123,Venezuela,282,Barinas,8.630485,-70.209908,Venezuelan Andean,,"Central Western Venezuela, Orinoquia, Andina, Zulian, Central Venezuela, Llanos",https://www.erepublik.com/en/main/region/Venezuelan-Andean
+124,Venezuela,63,Caracas,10.491016,-66.902061,Venezuelan Capital,"Iron, Oil","North Eastern Venezuela, Llanos, Central Venezuela",https://www.erepublik.com/en/main/region/Venezuelan-Capital
+125,Venezuela,283,Valencia (Venezuela),10.174127,-67.999815,Central Venezuela,"Clay, Wood, Limestone, Granite","Central Western Venezuela, Venezuelan Capital, Llanos, Venezuelan Andean",https://www.erepublik.com/en/main/region/Central-Venezuela
+126,Venezuela,284,Barquisimeto,10.0636111,-69.3347222,Central Western Venezuela,,"Venezuelan Andean, Zulian, Central Venezuela, Oriente",https://www.erepublik.com/en/main/region/Central-Western-Venezuela
+127,Venezuela,285,Puerto Ayacucho,5.665781,-67.634697,Guayana,,"Llanos, North of Brazil, Canary Islands, Azores, Amazonica, Orinoquia, North Eastern Venezuela",https://www.erepublik.com/en/main/region/Guayana
+129,Venezuela,286,San Juan de Los Morros,9.901082,-67.354408,Llanos,,"North Eastern Venezuela, Venezuelan Capital, Guayana, Central Venezuela, Orinoquia, Venezuelan Andean",https://www.erepublik.com/en/main/region/Llanos
+130,Venezuela,287,Barcelona (Venezuela),10.1329999,-64.6919939,North Eastern Venezuela,"Deer, Sand, Magnesium","Llanos, Venezuelan Capital, Guayana",https://www.erepublik.com/en/main/region/North-Eastern-Venezuela
+131,Venezuela,288,Maracaibo,10.64504,-71.637154,Zulian,,"Central Western Venezuela, Andina, Caribe e Insular, Venezuelan Andean",https://www.erepublik.com/en/main/region/Zulian
+132,Ukraine,293,Uzhhorod,48.6208,22.287883,Subcarpathia,,"Eastern Slovakia, Galicia and Lodomeria, Maramures, Northern Great Plain, Little Poland, Northern Hungary, Bukovyna",https://www.erepublik.com/en/main/region/Subcarpathia
+133,Ukraine,292,Lviv,49.839683,24.029717,Galicia and Lodomeria,,"Little Poland, Bukovyna, Volhynia, Subcarpathia, Podolia",https://www.erepublik.com/en/main/region/Galicia-and-Lodomeria
+134,Ukraine,296,Rivne,50.6199,26.251617,Volhynia,,"Galicia and Lodomeria, Polisia, Little Poland, Podolia, Brestskaya, Homelskaya",https://www.erepublik.com/en/main/region/Volhynia
+135,Ukraine,413,Zhytomyr,50.25465,28.658667,Polisia,,"Dnipro, Volhynia, Podolia, Siveria, Homelskaya",https://www.erepublik.com/en/main/region/Polisia
+136,Ukraine,294,Kamianets-Podilskyi,48.6833333,26.5833333,Podolia,,"Polisia, Bukovyna, Galicia and Lodomeria, Northern Basarabia, Transnistria, Bassarabia, Zaporozhia, Dnipro, Volhynia",https://www.erepublik.com/en/main/region/Podolia
+137,Ukraine,290,Chernivtsi,48.291683,25.935217,Bukovyna,,"Bucovina, Galicia and Lodomeria, Podolia, Maramures, Northern Basarabia, Subcarpathia",https://www.erepublik.com/en/main/region/Bukovyna
+138,Ukraine,234,Kyiv,50.4501,30.5234,Dnipro,,"Siveria, Sloboda, Polisia, Podolia, Zaporozhia",https://www.erepublik.com/en/main/region/Dnipro
+139,Ukraine,297,Chernihiv,51.4982,31.28935,Siveria,"Fish, Aluminum","Dnipro, Sloboda, Moscow and Central Russia, Central Black Earth, Polisia, Homelskaya",https://www.erepublik.com/en/main/region/Siveria
+140,Ukraine,289,Odessa,46.484583,30.7326,Bassarabia,,"Transnistria, Dobrogea, Southern Basarabia, Podolia, Zaporozhia, Taurida",https://www.erepublik.com/en/main/region/Bassarabia
+141,Ukraine,301,Zaporizhia,47.8388,35.139567,Zaporozhia,,"Donbas, Podolia, Sloboda, Dnipro, Bassarabia, Taurida",https://www.erepublik.com/en/main/region/Zaporozhia
+142,Ukraine,298,Kharkiv,49.9935,36.230383,Sloboda,"Iron, Saltpeter, Aluminum, Oil","Central Black Earth, Siveria, Donbas, Dnipro, Zaporozhia",https://www.erepublik.com/en/main/region/Sloboda
+143,Ukraine,299,Donetsk,48.015883,37.80285,Donbas,"Grain, Fruits, Cattle, Deer","North Caucasus, Sloboda, Zaporozhia, Central Black Earth, Taurida",https://www.erepublik.com/en/main/region/Donbas
+144,Ukraine,302,Simferopol,44.948056,34.104167,Taurida,,"Donbas, Zaporozhia, North Caucasus, Black Sea Coast of Turkey, Varna, Bassarabia, Abkhazia, Dobrogea",https://www.erepublik.com/en/main/region/Taurida
+146,Brazil,8,Brasilia,-15.7801482,-47.9291698,Center West of Brazil,,"Southeast of Brazil, Northeast of Brazil, North of Brazil, Paranena, Central East Chaco, Beni and Cochabamba, Santa Cruz, Parana and Santa Catarina",https://www.erepublik.com/en/main/region/Center-West-of-Brazil
+147,Brazil,51,Manaus,-3.1064093,-60.0264297,North of Brazil,,"Center West of Brazil, Guayana, Canary Islands, Azores, Beni and Cochabamba, Pando, Southern Low Amazon, Northern Low Amazon, Amazonica, Northeast of Brazil",https://www.erepublik.com/en/main/region/North-of-Brazil
+148,Brazil,303,Salvador,-12.9703817,-38.512382,Northeast of Brazil,"Deer, Saltpeter","Center West of Brazil, North of Brazil, Southeast of Brazil, South West States",https://www.erepublik.com/en/main/region/Northeast-of-Brazil
+149,Brazil,42,Sao Paulo,-23.5475,-46.63611,Southeast of Brazil,"Fish, Iron","Center West of Brazil, Parana and Santa Catarina, Northeast of Brazil",https://www.erepublik.com/en/main/region/Southeast-of-Brazil
+150,Brazil,304,Curitiba,-25.4283563,-49.2732515,Parana and Santa Catarina,"Grain, Fruits, Cattle, Deer","Southeast of Brazil, Mesopotamia, Rio Grande do Sul, Rio Grande do Sul, Paranena, Center West of Brazil, Northern Cape",https://www.erepublik.com/en/main/region/Parana-and-Santa-Catarina
+151,Argentina,70,Buenos Aires,-34.6037232,-58.3815931,Pampas,"Iron, Saltpeter, Oil","Mesopotamia, Cuyo, Patagonia, Western Cape, Charrua, Argentine Northwest, South East Chaco, South South States",https://www.erepublik.com/en/main/region/Pampas
+152,Argentina,305,San Miguel de Tucuman,-26.8082848,-65.2175903,Argentine Northwest,,"South East Chaco, Norte Grande, Norte Chico, Central East Chaco, Chuquisaca and Tarija, Bolivian Altiplano, Cuyo, Pampas",https://www.erepublik.com/en/main/region/Argentine-Northwest
+153,Argentina,256,Formosa,-26.185201,-58.1753697,South East Chaco,,"Mesopotamia, Argentine Northwest, Paranena, Central East Chaco, Pampas",https://www.erepublik.com/en/main/region/South-East-Chaco
+154,Argentina,258,Corrientes,-27.4712257,-58.8395844,Mesopotamia,"Cobalt, Titanium, Wolfram","South East Chaco, Pampas, Parana and Santa Catarina, Rio Grande do Sul, Charrua, Paranena",https://www.erepublik.com/en/main/region/Mesopotamia
+155,Argentina,249,Mendoza,-32.890183,-68.8440498,Cuyo,,"Pampas, Patagonia, Norte Chico, Argentine Northwest, Zona Central",https://www.erepublik.com/en/main/region/Cuyo
+156,Argentina,251,Neuquen,-38.9524444,-68.0641389,Patagonia,"Grain, Fruits, Cattle, Deer","Cuyo, Pampas, Zona Central, Zona Sur, Zona Austral",https://www.erepublik.com/en/main/region/Patagonia
+157,Portugal,306,Lisbon,38.7252993,-9.1500364,Lisboa,"Fish, Fruits, Cattle, Deer","Alentejo, Centro, Madeira",https://www.erepublik.com/en/main/region/Lisboa
+158,Portugal,307,Porto,41.1650559,-8.602816,Norte,,https://www.erepublik.com/en/main/region/Brittany,https://www.erepublik.com/en/main/region/Norte
+159,Portugal,308,Coimbra,40.2065687,-8.4146177,Centro,,"Norte, Lisboa, Alentejo, Castilla y Leon, Extremadura",https://www.erepublik.com/en/main/region/Centro
+160,Portugal,309,Evora,38.571431,-7.913502,Alentejo,Iron,"Lisboa, Algarve, Centro, Extremadura, Andalucia, Azores",https://www.erepublik.com/en/main/region/Alentejo
+161,Portugal,310,Faro,37.0193548,-7.9304397,Algarve,,"Alentejo, Andalucia, Azores",https://www.erepublik.com/en/main/region/Algarve
+162,Portugal,311,Ponta Delgada,37.7422417,-25.67495,Azores,Saltpeter,"Georgia, Algarve, Alentejo, Guayana, North of Brazil, Newfoundland and Labrador, Oriente",https://www.erepublik.com/en/main/region/Azores
+163,Portugal,312,Funchal,32.6669328,-16.9240554,Madeira,"Grain, Aluminum, Oil, Granite","Canary Islands, Lisboa",https://www.erepublik.com/en/main/region/Madeira
+166,Spain,14,Madrid,40.4166909,-3.7003454,Madrid,,"Castilla La Mancha, Castilla y Leon",https://www.erepublik.com/en/main/region/Madrid
+167,Spain,80,Sevilla,37.38264,-5.9962951,Andalucia,"Saltpeter, Neodymium, Cobalt","Extremadura, Murcia, Algarve, Alentejo, Castilla La Mancha, Canary Islands",https://www.erepublik.com/en/main/region/Andalucia
+168,Spain,84,Zaragoza,41.6568307,-0.8799101,Aragon,,"Catalonia, Navarra, Valencian Community, Castilla La Mancha, La Rioja",https://www.erepublik.com/en/main/region/Aragon
+169,Spain,313,Oviedo,43.3602994,-5.844781,Asturias,,"Castilla y Leon, Cantabria, Galicia, Virginia",https://www.erepublik.com/en/main/region/Asturias
+170,Spain,314,Vitoria Gasteiz,42.8467181,-2.6716351,Basque Country,,"La Rioja, Navarra, Cantabria, Castilla y Leon",https://www.erepublik.com/en/main/region/Basque-Country
+171,Spain,315,Santander,43.4609602,-3.8079336,Cantabria,,"Basque Country, Asturias, Castilla y Leon, Virginia",https://www.erepublik.com/en/main/region/Cantabria
+173,Spain,317,Valladolid,41.6529434,-4.7283811,Castilla y Leon,,"Asturias, Madrid, La Rioja, Basque Country, Centro, Norte, Extremadura, Cantabria, Galicia, Castilla La Mancha",https://www.erepublik.com/en/main/region/Castilla-Leon
+174,Spain,77,Barcelona,41.387917,2.1699187,Catalonia,,"Aragon, Midi-Pyrenees, Languedoc Roussillon, Valencian Community, Balearic Islands",https://www.erepublik.com/en/main/region/Catalonia
+175,Spain,318,Merida,38.9158586,-6.3456061,Extremadura,,"Andalucia, Castilla La Mancha, Centro, Alentejo, Castilla y Leon",https://www.erepublik.com/en/main/region/Extremadura
+176,Spain,319,Santiago de Compostela,42.8804471,-8.5463034,Galicia,,"Asturias, Norte, Castilla y Leon, South Carolina, Georgia",https://www.erepublik.com/en/main/region/Galicia-Spain
+177,Spain,79,Murcia,37.9834449,-1.1298897,Murcia,,"Valencian Community, Andalucia, Castilla La Mancha",https://www.erepublik.com/en/main/region/Murcia
+178,Spain,320,Pamplona,42.8179879,-1.6441835,Navarra,,"La Rioja, Basque Country, Aragon, Aquitaine",https://www.erepublik.com/en/main/region/Navarra
+179,Spain,321,Logrono,42.4656807,-2.4499826,La Rioja,,"Basque Country, Navarra, Castilla y Leon, Aragon",https://www.erepublik.com/en/main/region/La-Rioja
+180,Spain,322,Valencia,39.4702393,-0.3768049,Valencian Community,,"Murcia, Castilla La Mancha, Aragon, Catalonia, Balearic Islands",https://www.erepublik.com/en/main/region/Valencian
+181,Spain,316,Toledo,39.8567775,-4.0244759,Castilla La Mancha,"Grain, Fruits, Cattle","Madrid, Valencian Community, Extremadura, Murcia, Andalucia, Castilla y Leon, Aragon",https://www.erepublik.com/en/main/region/Castilla-La-Mancha
+183,Spain,324,Las Palmas de Gran Canaria,28.1248227,-15.4300065,Canary Islands,"Deer, Aluminum, Oil, Rubber","Madeira, Andalucia, Guayana, North of Brazil, Oriente",https://www.erepublik.com/en/main/region/Canary-Islands
+184,Spain,323,Palma de Mallorca,39.5695059,2.649966,Balearic Islands,,"Sardinia, Catalonia, Valencian Community",https://www.erepublik.com/en/main/region/Balearic-Islands
+185,France,89,Strasbourg,48.583148,7.747882,Alsace,,"Lorraine, Franche-comte, Baden-Wurttemberg, Romandie, Deutschschweiz, Rhineland-Palatinate, Hesse",https://www.erepublik.com/en/main/region/Alsace
+186,France,95,Bordeaux,44.837789,-0.57918,Aquitaine,Fish,"Midi-Pyrenees, Limousin, Poitou Charentes, Navarra, Maryland, Virginia, North Carolina",https://www.erepublik.com/en/main/region/Aquitaine
+187,France,92,Clermont-Ferrand,45.777222,3.087025,Auvergne,,"Rhone Alps, Limousin, Burgundy, Loire Valley, Midi-Pyrenees, Languedoc Roussillon",https://www.erepublik.com/en/main/region/Auvergne
+188,France,90,Rennes,48.113475,-1.675708,Brittany,Fish,"Pays de la Loire, Lower Normandy, New Jersey, Delaware, Nova Scotia, South West of England",https://www.erepublik.com/en/main/region/Brittany
+189,France,325,Dijon,47.322047,5.04148,Burgundy,,"Franche-comte, Rhone Alps, Champagne Ardenne, Auvergne, Paris Isle of France, Loire Valley",https://www.erepublik.com/en/main/region/Burgundy
+190,France,93,Orleans,47.902964,1.909251,Loire Valley,,"Pays de la Loire, Paris Isle of France, Poitou Charentes, Lower Normandy, Auvergne, Burgundy, Limousin, Upper Normandy",https://www.erepublik.com/en/main/region/Loire-Valley
+191,France,333,Chalons-en-Champagne,48.956682,4.363073,Champagne Ardenne,,"Lorraine, Picardy, Paris Isle of France, Franche-comte, Burgundy, Wallonia",https://www.erepublik.com/en/main/region/Champagne-Ardenne
+192,France,327,Ajaccio,41.919229,8.738635,Corsica,,"Provence Alpes Azur, Tuscany, Sardinia",https://www.erepublik.com/en/main/region/Corsica
+193,France,328,Besancon,47.237829,6.0240539,Franche-comte,,"Rhone Alps, Burgundy, Alsace, Champagne Ardenne, Romandie, Lorraine",https://www.erepublik.com/en/main/region/Franche-comte
+194,France,96,Montpellier,43.610769,3.876716,Languedoc Roussillon,,"Provence Alpes Azur, Midi-Pyrenees, Auvergne, Rhone Alps, Catalonia",https://www.erepublik.com/en/main/region/Languedoc-Roussillon
+195,France,99,Limoges,45.833619,1.261105,Limousin,,"Aquitaine, Auvergne, Poitou Charentes, Midi-Pyrenees, Loire Valley",https://www.erepublik.com/en/main/region/Limousin
+196,France,329,Metz,49.119666,6.176905,Lorraine,,"Alsace, Champagne Ardenne, Saarland, Franche-comte, Rhineland-Palatinate, Hesse",https://www.erepublik.com/en/main/region/Lorraine
+197,France,330,Caen,49.182863,-0.370679,Lower Normandy,,"Upper Normandy, Brittany, Pays de la Loire, Loire Valley, South East of England, South West of England",https://www.erepublik.com/en/main/region/Lower-Normandy
+198,France,101,Toulouse,43.604652,1.444209,Midi-Pyrenees,"Grain, Fruits, Cattle, Deer","Aquitaine, Languedoc Roussillon, Catalonia, Auvergne, Limousin",https://www.erepublik.com/en/main/region/Midi-Pyrenees
+199,France,10,Paris,48.856614,2.3522219,Paris Isle of France,Wood,"Loire Valley, Upper Normandy, Picardy, Champagne Ardenne, Burgundy",https://www.erepublik.com/en/main/region/Paris-Isle-of-France
+200,France,85,Nantes,47.218371,-1.553621,Pays de la Loire,Cattle,"Loire Valley, Brittany, Poitou Charentes, Lower Normandy, New Jersey, Delaware, Nova Scotia",https://www.erepublik.com/en/main/region/Pays-de-la-Loire
+201,France,331,Amiens,49.894067,2.295753,Picardy,,"Paris Isle of France, North Calais, Upper Normandy, Champagne Ardenne, South East of England",https://www.erepublik.com/en/main/region/Picardy
+202,France,332,Poitiers,46.580224,0.340375,Poitou Charentes,,"Pays de la Loire, Loire Valley, Limousin, Aquitaine, Maryland",https://www.erepublik.com/en/main/region/Poitou-Charentes
+203,France,97,Marseille,43.296482,5.36978,Provence Alpes Azur,,"Languedoc Roussillon, Rhone Alps, Piedmont, Liguria, Corsica",https://www.erepublik.com/en/main/region/Provence-Alpes-Azur
+204,France,88,Lyon,45.764043,4.835659,Rhone Alps,,"Auvergne, Franche-comte, Burgundy, Romandie, Aosta Valley, Piedmont, Provence Alpes Azur, Languedoc Roussillon",https://www.erepublik.com/en/main/region/Rhone-Alps
+205,France,102,Rouen,49.443232,1.099971,Upper Normandy,,"Paris Isle of France, Picardy, Lower Normandy, Loire Valley, South East of England",https://www.erepublik.com/en/main/region/Upper-Normandy
+207,France,86,Lille,50.62925,3.057256,North Calais,,"Picardy, Flanders, Wallonia, South East of England",https://www.erepublik.com/en/main/region/North-Calais
+208,Ireland,334,Dublin,53.3494426,-6.2600825,Dublin,,"Louth, Wexford, Wales, Shannon",https://www.erepublik.com/en/main/region/Dublin
+209,Ireland,335,Cork,51.8968917,-8.4863157,Cork,"Fish, Cattle, Wolfram","Shannon, Wexford, Maine, Massachusetts, Rhode Island, Connecticut, New York, Newfoundland and Labrador",https://www.erepublik.com/en/main/region/Cork
+210,Ireland,336,Limerick,52.6652,-8.6238,Shannon,"Fruits, Sand, Clay, Magnesium","Cork, Mayo, Wexford, Louth, Northern Ireland, Maine, Massachusetts, Rhode Island, Connecticut, New York, Newfoundland and Labrador, Dublin",https://www.erepublik.com/en/main/region/Shannon
+212,Ireland,337,Castlebar,53.8608,-9.2988,Mayo,Wood,"Shannon, Northern Ireland, Newfoundland and Labrador",https://www.erepublik.com/en/main/region/Mayo
+213,Ireland,338,Waterford,52.2527291,-7.1256084,Wexford,,"Cork, Shannon, Dublin, Louth, Wales",https://www.erepublik.com/en/main/region/Wexford
+215,Ireland,339,Dundalk,53.9979451,-6.405957,Louth,,"Dublin, Wexford, Shannon, Northern Ireland",https://www.erepublik.com/en/main/region/Louth
+216,United Kingdom,133,London,51.5073346,-0.1276831,London,,"South East of England, East of England",https://www.erepublik.com/en/main/region/London
+217,United Kingdom,141,Edinburgh,55.953252,-3.188267,Scotland,"Iron, Aluminum","North East of England, North West of England, Newfoundland and Labrador, Nordjylland, Vestlandet, Sorlandet, Northern Ireland",https://www.erepublik.com/en/main/region/Scotland
+218,United Kingdom,139,Cardiff,51.481581,-3.17909,Wales,,"West Midlands, North West of England, Maine, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Newfoundland and Labrador, Wexford, Dublin",https://www.erepublik.com/en/main/region/Wales
+219,United Kingdom,140,Belfast,54.5974433,-5.9340683,Northern Ireland,,"Louth, Mayo, Shannon, Scotland",https://www.erepublik.com/en/main/region/Northern-Ireland
+220,United Kingdom,340,Oxford,51.751724,-1.255285,South East of England,,"London, South West of England, West Midlands, East Midlands, East of England, North Calais, Picardy, Upper Normandy, Lower Normandy, Flanders",https://www.erepublik.com/en/main/region/South-East-of-England
+221,United Kingdom,137,Bristol,51.454513,-2.58791,South West of England,,"West Midlands, South East of England, Maine, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Newfoundland and Labrador, Brittany, Lower Normandy",https://www.erepublik.com/en/main/region/South-West-of-England
+222,United Kingdom,341,Nottingham,52.9547832,-1.1581086,East Midlands,,"East of England, North West of England, West Midlands, Yorkshire & Humberside, South East of England",https://www.erepublik.com/en/main/region/East-Midlands
+223,United Kingdom,135,Birmingham,52.486243,-1.890401,West Midlands,,"Wales, South West of England, North West of England, South East of England, East Midlands",https://www.erepublik.com/en/main/region/West-Midlands
+224,United Kingdom,342,Norwich,52.6308859,1.297355,East of England,,"London, East Midlands, South East of England, Flanders, Southern Netherlands",https://www.erepublik.com/en/main/region/East-of-England
+225,United Kingdom,343,Leeds,53.801279,-1.548567,Yorkshire & Humberside,"Fish, Fruits, Cattle, Iron","North West of England, North East of England, East Midlands",https://www.erepublik.com/en/main/region/Yorkshire-Humberside
+226,United Kingdom,344,Newcastle upon Tyne,54.978252,-1.61778,North East of England,"Grain, Fish, Sand, Wood","Yorkshire & Humberside, Scotland, North West of England, Midtjylland",https://www.erepublik.com/en/main/region/North-East-of-England
+227,United Kingdom,345,Manchester,53.466667,-2.233333,North West of England,,"Yorkshire & Humberside, East Midlands, West Midlands, Wales, Scotland, North East of England",https://www.erepublik.com/en/main/region/North-West-of-England
+228,Belgium,145,Brussels,50.8503396,4.3517103,Brussels,"Fish, Fruits, Cattle, Wolfram","Wallonia, Flanders",https://www.erepublik.com/en/main/region/Brussels
+229,Belgium,346,Antwerp,51.2192159,4.4028818,Flanders,"Oil, Clay","Brussels, Southern Netherlands, Wallonia, North Calais, South East of England, East of England",https://www.erepublik.com/en/main/region/Flanders
+230,Belgium,148,Namur,50.465328,4.867665,Wallonia,"Iron, Aluminum, Magnesium, Titanium","Brussels, Rhineland-Palatinate, Southern Netherlands, Flanders, Champagne Ardenne, North Calais, North Rhine-Westphalia",https://www.erepublik.com/en/main/region/Wallonia
+231,Denmark,347,Copenhagen,55.67594,12.56553,Hovedstaden,,"Sjaelland, Scania",https://www.erepublik.com/en/main/region/Hovedstaden
+232,Denmark,348,Viborg,56.452027,9.396347,Midtjylland,Fruits,"Nordjylland, Syddanmark, North East of England, Sjaelland, Bohus",https://www.erepublik.com/en/main/region/Midtjylland
+233,Denmark,349,Aalborg,57.028811,9.917771,Nordjylland,,"Midtjylland, Scotland, Scania, Bohus, Ostlandet, Sorlandet",https://www.erepublik.com/en/main/region/Nordjylland
+235,Denmark,350,Soro,55.442645,11.5609369,Sjaelland,Sand,"Hovedstaden, Syddanmark, Scania, Midtjylland",https://www.erepublik.com/en/main/region/Sjaelland
+236,Denmark,351,Vejle,55.7113112,9.5363541,Syddanmark,,"Midtjylland, Sjaelland, Schleswig-Holstein and Hamburg",https://www.erepublik.com/en/main/region/Syddanmark
+237,Finland,233,Helsinki,60.169845,24.9385508,Southern Finland,,"Western Finland, Eastern Finland, Leningrad Oblast, Pohja-Eesti",https://www.erepublik.com/en/main/region/Southern-Finland
+238,Finland,352,Turku,60.449249,22.259239,Western Finland,"Fruits, Cattle","Southern Finland, Aland, Eastern Finland, Oulu",https://www.erepublik.com/en/main/region/Western-Finland
+239,Finland,353,Mikkeli,61.6858074,27.2734876,Eastern Finland,,"Southern Finland, Northern Russia, Western Finland, Oulu, Leningrad Oblast",https://www.erepublik.com/en/main/region/Eastern-Finland
+240,Finland,354,Oulu,65.0126148,25.4714526,Oulu,"Grain, Deer, Iron, Titanium","Lapland, Northern Russia, Eastern Finland, Western Finland",https://www.erepublik.com/en/main/region/Oulu
+241,Finland,355,Rovaniemi,66.4970216,25.724999,Lapland,"Saltpeter, Aluminum, Oil, Rubber","Oulu, Northern Russia, Nord-Norge, Norrland and Sameland",https://www.erepublik.com/en/main/region/Lapland
+242,Finland,356,Mariehamn,60.0970945,19.9348339,Aland,,Western Finland,https://www.erepublik.com/en/main/region/Aland
+243,Germany,161,Stuttgart,48.7754181,9.1817588,Baden-Wurttemberg,"Grain, Fish, Fruits, Cattle","Bavaria, Alsace, Hesse, Deutschschweiz",https://www.erepublik.com/en/main/region/Baden-Wurttemberg
+244,Germany,164,Munich,48.1366069,11.5770851,Bavaria,,"Baden-Wurttemberg, Salzburg, Tyrol, Upper Austria, Vorarlberg, Southern Bohemia, Saxony, Thuringia, Hesse, Lower Saxony and Bremen, Deutschschweiz",https://www.erepublik.com/en/main/region/Bavaria
+246,Germany,11,Berlin,52.519171,13.4060912,Brandenburg and Berlin,"Fish, Fruits","Saxony, Saxony-Anhalt, Mecklenburg-Western Pomerania, Great Poland, Silesia, Pomerania",https://www.erepublik.com/en/main/region/Brandenburg-and-Berlin
+249,Germany,358,Wiesbaden,50.0630804,8.2433437,Hesse,,"North Rhine-Westphalia, Rhineland-Palatinate, Lower Saxony and Bremen, Bavaria, Baden-Wurttemberg, Alsace, Lorraine",https://www.erepublik.com/en/main/region/Hesse
+250,Germany,359,Schwerin,53.6324347,11.4128898,Mecklenburg-Western Pomerania,"Fish, Fruits","Schleswig-Holstein and Hamburg, Brandenburg and Berlin, Pomerania, Scania, Saxony-Anhalt",https://www.erepublik.com/en/main/region/Mecklenburg
+251,Germany,166,Bremen,53.0792962,8.8016937,Lower Saxony and Bremen,,"Schleswig-Holstein and Hamburg, Northern Netherlands, Saxony-Anhalt, Thuringia, Hesse, North Rhine-Westphalia, Eastern Netherlands",https://www.erepublik.com/en/main/region/Lower-Saxony-and-Bremen
+252,Germany,361,Dusseldorf,51.2277411,6.7734556,North Rhine-Westphalia,,"Hesse, Southern Netherlands, Lower Saxony and Bremen, Rhineland-Palatinate, Wallonia, Eastern Netherlands",https://www.erepublik.com/en/main/region/North-Rhine-Westphalia
+253,Germany,362,Mainz,49.9928617,8.2472526,Rhineland-Palatinate,,"Hesse, Saarland, Wallonia, Lorraine, Alsace, North Rhine-Westphalia",https://www.erepublik.com/en/main/region/Rhineland-Palatinate
+254,Germany,363,Saarbrucken,49.2401572,6.9969327,Saarland,,"Rhineland-Palatinate, Lorraine",https://www.erepublik.com/en/main/region/Saarland
+255,Germany,165,Dresden,51.0504088,13.7372621,Saxony,,"Brandenburg and Berlin, Saxony-Anhalt, Thuringia, Northern Bohemia, Southern Bohemia, Bavaria, Silesia",https://www.erepublik.com/en/main/region/Saxony
+256,Germany,364,Magdeburg,52.130807,11.628878,Saxony-Anhalt,,"Saxony, Thuringia, Brandenburg and Berlin, Lower Saxony and Bremen, Schleswig-Holstein and Hamburg, Mecklenburg-Western Pomerania",https://www.erepublik.com/en/main/region/Saxony-Anhalt
+257,Germany,167,Hamburg,53.5510846,9.9936818,Schleswig-Holstein and Hamburg,Wood,"Lower Saxony and Bremen, Mecklenburg-Western Pomerania, Syddanmark, Saxony-Anhalt",https://www.erepublik.com/en/main/region/Schleswig-Holstein-and-Hamburg
+258,Germany,366,Erfurt,50.9847679,11.0298799,Thuringia,,"Saxony, Saxony-Anhalt, Lower Saxony and Bremen, Bavaria",https://www.erepublik.com/en/main/region/Thuringia
+259,Italy,367,L'Aquila,42.3498479,13.3995091,Abruzzo,,"Marche, Lazio, Molise",https://www.erepublik.com/en/main/region/Abruzzo
+260,Italy,368,Aosta,45.7349445,7.3130718,Aosta Valley,,"Piedmont, Rhone Alps, Romandie",https://www.erepublik.com/en/main/region/Aosta-Valley
+261,Italy,369,Bari,41.1171432,16.8718715,Apulia,,"Basilicata, Molise, Campania, Ionian Islands, Montenegrin Coast, South Dalmatia, Albanian Coast",https://www.erepublik.com/en/main/region/Apulia
+262,Italy,370,Potenza,40.6404067,15.8056041,Basilicata,,"Apulia, Calabria, Campania",https://www.erepublik.com/en/main/region/Basilicata
+263,Italy,371,Catanzaro,38.9097919,16.5876516,Calabria,,"Sicily, Basilicata",https://www.erepublik.com/en/main/region/Calabria
+264,Italy,109,Naples,40.8517746,14.2681244,Campania,,"Lazio, Molise, Basilicata, Apulia",https://www.erepublik.com/en/main/region/Campania
+265,Italy,110,Bologna,44.494887,11.3426163,Emilia-Romagna,,"Tuscany, Veneto, Liguria, Marche, Lombardy, Piedmont",https://www.erepublik.com/en/main/region/Emilia-Romagna
+266,Italy,372,Trieste,45.6495354,13.7779716,Friuli-Venezia Giulia,,"Veneto, Carinthia, Slovenian Littoral",https://www.erepublik.com/en/main/region/Friuli-Venezia-Giulia
+267,Italy,13,Rome,41.9015141,12.4607737,Lazio,Sand,"Campania, Abruzzo, Umbria, Molise, Marche, Tuscany, Sardinia",https://www.erepublik.com/en/main/region/Lazio
+268,Italy,373,Genoa,44.4056499,8.946256,Liguria,,"Emilia-Romagna, Piedmont, Provence Alpes Azur, Tuscany",https://www.erepublik.com/en/main/region/Liguria
+269,Italy,103,Milan,45.4654542,9.186516,Lombardy,,"Piedmont, Trentino-South Tyrol, Emilia-Romagna, Veneto, Graubunden, Svizzera italiana",https://www.erepublik.com/en/main/region/Lombardy
+270,Italy,374,Ancona,43.6158299,13.518915,Marche,,"Tuscany, Umbria, Abruzzo, Emilia-Romagna, Lazio",https://www.erepublik.com/en/main/region/Marche
+271,Italy,375,Campobasso,41.5602544,14.6627161,Molise,,"Abruzzo, Campania, Apulia, Lazio",https://www.erepublik.com/en/main/region/Molise
+272,Italy,111,Turin,45.0629022,7.6784897,Piedmont,,"Lombardy, Aosta Valley, Liguria, Rhone Alps, Provence Alpes Azur, Emilia-Romagna, Deutschschweiz, Svizzera italiana, Romandie",https://www.erepublik.com/en/main/region/Piedmont
+273,Italy,108,Cagliari,39.2238411,9.1216613,Sardinia,"Grain, Fruits, Cattle","Corsica, Lazio, Sicily, Balearic Islands",https://www.erepublik.com/en/main/region/Sardinia
+274,Italy,107,Palermo,38.1156879,13.3612671,Sicily,"Deer, Clay, Wood, Cobalt","Calabria, Sardinia",https://www.erepublik.com/en/main/region/Sicily
+275,Italy,376,Trento,46.0696924,11.1210886,Trentino-South Tyrol,,"Lombardy, Veneto, Salzburg, Tyrol, Graubunden",https://www.erepublik.com/en/main/region/Trentino-South-Tyrol
+276,Italy,106,Florence,43.7710332,11.2480006,Tuscany,,"Emilia-Romagna, Marche, Umbria, Liguria, Lazio, Corsica",https://www.erepublik.com/en/main/region/Tuscany
+277,Italy,377,Perugia,43.1107168,12.3908279,Umbria,,"Marche, Tuscany, Lazio",https://www.erepublik.com/en/main/region/Umbria
+278,Italy,105,Venice,45.4408474,12.3155151,Veneto,,"Emilia-Romagna, Trentino-South Tyrol, Friuli-Venezia Giulia, Salzburg, Lombardy",https://www.erepublik.com/en/main/region/Veneto
+291,Norway,385,Tromso,69.6492047,18.9553238,Nord-Norge,"Fish, Fruits, Cobalt, Wolfram","Trondelag, Lapland, Norrland and Sameland, Northern Russia, Svalbard & Jan Mayen",https://www.erepublik.com/en/main/region/Nord-Norge
+292,Norway,386,Kristiansand,58.150937,7.9961926,Sorlandet,,"Vestlandet, Ostlandet, Scotland, Nordjylland",https://www.erepublik.com/en/main/region/Sorlandet
+293,Norway,387,Trondheim,63.4305149,10.3950528,Trondelag,,"Ostlandet, Nord-Norge, Jamtland Harjedalen, Vestlandet, Svealand",https://www.erepublik.com/en/main/region/Trondelag
+294,Norway,388,Bergen,60.3912628,5.3220544,Vestlandet,,"Ostlandet, Sorlandet, Trondelag, Scotland, Northern Netherlands",https://www.erepublik.com/en/main/region/Vestlandet
+295,Norway,230,Oslo,59.9138688,10.7522454,Ostlandet,,"Vestlandet, Sorlandet, Trondelag, Svealand, Gotaland, Bohus, Nordjylland, Jamtland Harjedalen",https://www.erepublik.com/en/main/region/Ostlandet
+306,Poland,398,Gdansk,54.3520252,18.6466384,Pomerania,"Iron, Saltpeter, Aluminum, Oil","Mazuria, Great Poland, Brandenburg and Berlin, Mecklenburg-Western Pomerania, Mazovia, Kaliningrad, Scania",https://www.erepublik.com/en/main/region/Pomerania
+307,Poland,393,Wroclaw,51.1078852,17.0385376,Silesia,"Grain, Cattle","Great Poland, Little Poland, Northern Bohemia, Moravia, Brandenburg and Berlin, Saxony, Mazovia",https://www.erepublik.com/en/main/region/Silesia
+312,Slovakia,232,Bratislava,48.1462386,17.1072618,Bratislava,"Fish, Fruits, Cattle","Western Slovakia, Western Transdanubia, Lower Austria, Burgenland",https://www.erepublik.com/en/main/region/Bratislava
+315,Slovakia,406,Nitra,48.3098916,18.0858758,Western Slovakia,"Sand, Magnesium, Titanium","Bratislava, Central Slovakia, Lower Austria, Moravia, Central Hungary, Western Transdanubia, Central Transdanubia",https://www.erepublik.com/en/main/region/Western-Slovakia
+316,Slovakia,407,Zilina,49.2195481,18.7412735,Central Slovakia,Fish,"Eastern Slovakia, Western Slovakia, Little Poland, Moravia, Northern Hungary",https://www.erepublik.com/en/main/region/Central-Slovakia
+319,Slovakia,410,Kosice,48.7222588,21.2569865,Eastern Slovakia,,"Central Slovakia, Subcarpathia, Northern Hungary, Little Poland",https://www.erepublik.com/en/main/region/Eastern-Slovakia
+320,Sweden,227,Stockholm,59.32893,18.06491,Svealand,"Iron, Aluminum, Oil","Gotaland, Ostlandet, Trondelag, Jamtland Harjedalen, Norrland and Sameland, Gotland",https://www.erepublik.com/en/main/region/Svealand
+321,Sweden,411,Umea,63.8258471,20.2630354,Norrland and Sameland,"Sand, Clay, Wood","Jamtland Harjedalen, Lapland, Nord-Norge, Svealand",https://www.erepublik.com/en/main/region/Norrland-Sameland
+322,Sweden,412,Ostersund,63.1766832,14.6360681,Jamtland Harjedalen,,"Norrland and Sameland, Trondelag, Svealand, Ostlandet",https://www.erepublik.com/en/main/region/Jamtland-Harjedalen
+323,Sweden,414,Goteborg,57.70887,11.97456,Bohus,,"Scania, Ostlandet, Gotaland, Nordjylland, Midtjylland",https://www.erepublik.com/en/main/region/Bohus
+324,Sweden,415,Malmo,55.604981,13.003822,Scania,,"Bohus, Smaland, Gotaland, Hovedstaden, Nordjylland, Mecklenburg-Western Pomerania, Sjaelland, Lithuania Minor, Pomerania",https://www.erepublik.com/en/main/region/Scania
+325,Sweden,416,Orebro,59.2752626,15.2134105,Gotaland,"Grain, Fish, Fruits, Cattle","Svealand, Smaland, Ostlandet, Bohus, Scania, Gotland",https://www.erepublik.com/en/main/region/Gotaland
+326,Sweden,417,Jonkoping,57.7826137,14.1617876,Smaland,,"Scania, Gotaland, Gotland",https://www.erepublik.com/en/main/region/Smaland
+328,Australia,243,Canberra,-35.3082355,149.1242241,New South Wales,,"South Australia, Victoria, Queensland, Auckland",https://www.erepublik.com/en/main/region/New-South-Wales
+329,Australia,419,Brisbane,-27.4710107,153.0234489,Queensland,,"Northern Territory, Papua, South Australia, New South Wales, Chimor",https://www.erepublik.com/en/main/region/Queensland
+330,Australia,420,Adelaide,-34.9286212,138.5999594,South Australia,"Grain, Deer, Neodymium","New South Wales, Victoria, Western Australia, Queensland, Northern Territory, Tasmania",https://www.erepublik.com/en/main/region/South-Australia
+331,Australia,421,Hobart,-42.8819032,147.3238148,Tasmania,"Fish, Fruits, Cattle, Deer","Victoria, South Australia, Canterbury, Otago",https://www.erepublik.com/en/main/region/Tasmania
+332,Australia,422,Melbourne,-37.8113667,144.9718286,Victoria,Magnesium,"South Australia, New South Wales, Tasmania, Canterbury",https://www.erepublik.com/en/main/region/Victoria
+333,Australia,423,Perth,-31.932854,115.86194,Western Australia,Sand,"South Australia, KwaZulu Natal, Eastern Cape, Lesser Sunda Islands, Java, Northern Territory",https://www.erepublik.com/en/main/region/Western-Australia
+334,Australia,424,Darwin,-12.4628198,130.8417694,Northern Territory,,"Queensland, Papua, Maluku islands, Lesser Sunda Islands, Western Australia, South Australia",https://www.erepublik.com/en/main/region/Northern-Territory
+336,Switzerland,143,Bern,46.9479222,7.4446085,Deutschschweiz,"Iron, Aluminum, Sand","Romandie, Vorarlberg, Alsace, Baden-Wurttemberg, Piedmont, Svizzera italiana, Graubunden, Bavaria",https://www.erepublik.com/en/main/region/Deutschschweiz
+337,Switzerland,157,Geneva,46.1983922,6.1422961,Romandie,"Magnesium, Titanium, Wolfram","Deutschschweiz, Rhone Alps, Franche-comte, Alsace, Aosta Valley, Piedmont",https://www.erepublik.com/en/main/region/Romandie
+338,Switzerland,158,Bellinzona,46.1984944,9.0269178,Svizzera italiana,,"Lombardy, Piedmont, Deutschschweiz, Graubunden",https://www.erepublik.com/en/main/region/Svizzera-italiana
+339,Switzerland,159,Chur,46.8572621,9.5267305,Graubunden,"Fish, Fruits, Cattle","Tyrol, Vorarlberg, Lombardy, Trentino-South Tyrol, Deutschschweiz, Svizzera italiana",https://www.erepublik.com/en/main/region/Graubunden
+340,Austria,425,Eisenstadt,47.84637,16.52796,Burgenland,,"Lower Austria, Styria, Western Transdanubia, Bratislava, Prekmurje",https://www.erepublik.com/en/main/region/Burgenland
+341,Austria,426,Klagenfurt,46.62794,14.30899,Carinthia,,"Styria, Salzburg, Friuli-Venezia Giulia, Slovenian Littoral, Upper Carniola, Styria and Carinthia",https://www.erepublik.com/en/main/region/Carinthia
+342,Austria,228,Vienna,48.2081743,16.3738189,Lower Austria,,"Burgenland, Styria, Upper Austria, Bratislava, Moravia, Southern Bohemia, Western Slovakia",https://www.erepublik.com/en/main/region/Lower-Austria
+343,Austria,428,Linz,48.30694,14.28583,Upper Austria,"Sand, Clay, Wood","Salzburg, Lower Austria, Styria, Bavaria, Southern Bohemia",https://www.erepublik.com/en/main/region/Upper-Austria
+344,Austria,429,Salzburg,47.80949,13.05501,Salzburg,,"Tyrol, Upper Austria, Carinthia, Bavaria, Veneto, Trentino-South Tyrol, Styria",https://www.erepublik.com/en/main/region/Salzburg
+345,Austria,430,Graz,47.070714,15.439504,Styria,"Magnesium, Titanium","Burgenland, Carinthia, Lower Austria, Upper Austria, Salzburg, Styria and Carinthia",https://www.erepublik.com/en/main/region/Styria
+346,Austria,431,Innsbruck,47.2692124,11.4041024,Tyrol,Cattle,"Vorarlberg, Salzburg, Graubunden, Trentino-South Tyrol, Bavaria",https://www.erepublik.com/en/main/region/Tyrol
+347,Austria,432,Bregenz,47.50075,9.74231,Vorarlberg,"Fish, Fruits, Cattle, Sand","Tyrol, Bavaria, Deutschschweiz, Graubunden",https://www.erepublik.com/en/main/region/Vorarlberg
+349,Bulgaria,437,Burgas,42.4976779,27.4700254,Burgas,,"Varna, Marmara, Ruse, Plovdiv, Black Sea Coast of Turkey",https://www.erepublik.com/en/main/region/Burgas
+352,Bulgaria,433,Vidin,43.9937135,22.8764136,Vidin,"Iron, Aluminum","Sofia, Oltenia, Ruse, Eastern Serbia, Southern Serbia",https://www.erepublik.com/en/main/region/Vidin
+353,Bulgaria,439,Plovdiv,42.1438409,24.7495615,Plovdiv,,"Sofia, Burgas, Ruse, Marmara, Thrace",https://www.erepublik.com/en/main/region/Plovdiv
+355,Bulgaria,236,Sofia,42.6964917,23.3260106,Sofia,,"Vidin, Plovdiv, Ruse, Thrace, Macedonia, Southern Serbia, Eastern Macedonia",https://www.erepublik.com/en/main/region/Sofia
+356,Bulgaria,436,Varna,43.2166452,27.9118058,Varna,"Grain, Fish, Fruits, Cattle","Burgas, Ruse, Muntenia, Dobrogea, Taurida, Black Sea Coast of Turkey",https://www.erepublik.com/en/main/region/Varna
+358,Bulgaria,435,Ruse,43.8495786,25.9552292,Ruse,"Magnesium, Titanium, Wolfram","Varna, Muntenia, Oltenia, Burgas, Plovdiv, Vidin, Sofia",https://www.erepublik.com/en/main/region/Ruse
+361,China,440,Hefei,31.821448,117.227271,Anhui,,"Zhejiang, Jiangsu, Hubei, Jiangxi, Shanghai, Henan, Hunan",https://www.erepublik.com/en/main/region/Anhui
+362,China,441,Fuzhou,26.074508,119.296494,Fujian,,"Zhejiang, Jiangxi, Guangdong, Kyushu, Northern Taiwan, Central Taiwan",https://www.erepublik.com/en/main/region/Fujian
+363,China,442,Lanzhou,36.05639,103.79222,Gansu,,"Sichuan, Shaanxi, Qinghai, Ningxia, Inner Mongolia, Xinjiang",https://www.erepublik.com/en/main/region/Gansu
+364,China,443,Guangzhou,23.129163,113.264435,Guangdong,,"Hunan, Fujian, Jiangxi, Hainan, Guangxi, Luzon, Southern Taiwan",https://www.erepublik.com/en/main/region/Guangdong
+368,China,447,Harbin,45.803775,126.534967,Heilongjiang,,"Jilin, Far Eastern Russia, Inner Mongolia",https://www.erepublik.com/en/main/region/Heilongjiang
+370,China,449,Wuhan,30.593099,114.305393,Hubei,,"Hunan, Anhui, Jiangxi, Henan, Shaanxi, Chongqing",https://www.erepublik.com/en/main/region/Hubei
+371,China,450,Changsha,28.228209,112.938814,Hunan,,"Hubei, Jiangxi, Guangdong, Guizhou, Chongqing, Anhui, Guangxi",https://www.erepublik.com/en/main/region/Hunan
+372,China,451,Nanjing,32.060255,118.796877,Jiangsu,,"Zhejiang, Anhui, Shandong, Shanghai, Jeollanam-do, Jeju, Chungcheongnam-do, Jeollabuk-do",https://www.erepublik.com/en/main/region/Jiangsu
+373,China,452,Nanchang,28.68316,115.858089,Jiangxi,,"Hunan, Fujian, Guangdong, Zhejiang, Hubei, Anhui",https://www.erepublik.com/en/main/region/Jiangxi
+375,China,454,Shenyang,41.80572,123.43147,Liaoning,,"Jilin, Beijing, Shandong, Pyongan, Inner Mongolia",https://www.erepublik.com/en/main/region/Liaoning
+377,China,456,Xi'an,34.341568,108.940175,Shaanxi,,"Sichuan, Gansu, Shanxi, Hubei, Henan, Ningxia, Chongqing, Inner Mongolia",https://www.erepublik.com/en/main/region/Shaanxi
+378,China,458,Jinan,36.650997,117.120497,Shandong,,"Henan, Jiangsu, Gyeonggi-do, Chungcheongnam-do, Jeollabuk-do, Liaoning, Beijing",https://www.erepublik.com/en/main/region/Shandong
+379,China,457,Taiyuan,37.87059,112.548879,Shanxi,,"Inner Mongolia, Henan, Shaanxi, Ningxia, Beijing",https://www.erepublik.com/en/main/region/Shanxi
+380,China,459,Chengdu,30.658601,104.064856,Sichuan,"Grain, Fruits, Cattle","Shaanxi, Gansu, Yunnan, Tibet, Chongqing, Henan",https://www.erepublik.com/en/main/region/Sichuan
+381,China,460,Kunming,24.880182,102.832861,Yunnan,,"Sichuan, Guizhou, Guangxi, Tibet, Chongqing",https://www.erepublik.com/en/main/region/Yunnan
+382,China,461,Hangzhou,30.274089,120.155069,Zhejiang,Fish,"Fujian, Shanghai, Anhui, Jiangxi, Jiangsu, Kyushu",https://www.erepublik.com/en/main/region/Zhejiang
+384,China,444,Guiyang,26.647449,106.630143,Guizhou,,"Hunan, Guangxi, Yunnan, Chongqing",https://www.erepublik.com/en/main/region/Guizhou
+385,China,445,Haikou,20.030793,110.328859,Hainan,,"Guangdong, Guangxi, Luzon, Southern Taiwan",https://www.erepublik.com/en/main/region/Hainan
+386,China,448,Zhengzhou,34.7466,113.625368,Henan,,"Shandong, Shanxi, Hubei, Shaanxi, Anhui, Beijing, Sichuan",https://www.erepublik.com/en/main/region/Henan
+387,China,453,Changchun,43.817084,125.323542,Jilin,,"Heilongjiang, Liaoning, Far Eastern Russia, Chagang, Ryanggang, Hamgyong, Pyongan, Inner Mongolia",https://www.erepublik.com/en/main/region/Jilin
+389,China,455,Xining,36.617144,101.778228,Qinghai,,"Gansu, Xinjiang, Ningxia, Tibet",https://www.erepublik.com/en/main/region/Qinghai
+390,China,462,Nanning,22.817239,108.366129,Guangxi,,"Guangdong, Guizhou, Hainan, Yunnan, Hunan",https://www.erepublik.com/en/main/region/Guangxi
+391,China,463,Hohhot,40.842299,111.749138,Inner Mongolia,,"Beijing, Shanxi, Ningxia, Eastern Siberia, Heilongjiang, Shaanxi, Jilin, Gansu, Xinjiang, Liaoning",https://www.erepublik.com/en/main/region/Inner-Mongolia
+392,China,464,Yinchuan,38.487194,106.230909,Ningxia,,"Inner Mongolia, Gansu, Shaanxi, Qinghai, Shanxi",https://www.erepublik.com/en/main/region/Ningxia
+393,China,465,Urumqi,43.825645,87.616823,Xinjiang,,"Qinghai, Tibet, Western Siberia, Jammu and Kashmir, North-West Frontier Province, Inner Mongolia, Gansu",https://www.erepublik.com/en/main/region/Xinjiang
+394,China,466,Lhasa,29.645554,91.140856,Tibet,Limestone,"Yunnan, Sichuan, Xinjiang, Qinghai, North Eastern India, Jammu and Kashmir, Northern India, West Bengal",https://www.erepublik.com/en/main/region/Tibet
+395,China,9,Beijing,39.90403,116.407526,Beijing,Aluminum,"Inner Mongolia, Liaoning, Shanxi, Henan, Shandong",https://www.erepublik.com/en/main/region/Beijing
+396,China,468,Chongqing,29.56301,106.551557,Chongqing,,"Sichuan, Guizhou, Hunan, Shaanxi, Yunnan, Hubei",https://www.erepublik.com/en/main/region/Chongqing
+397,China,467,Shanghai,31.230393,121.473704,Shanghai,,"Zhejiang, Anhui, Jiangsu, Kyushu",https://www.erepublik.com/en/main/region/Shanghai
+413,Greece,482,Alexandroupoli,40.8457193,25.873962,Thrace,,"Macedonia, Marmara, Plovdiv, Sofia, Aegean Islands",https://www.erepublik.com/en/main/region/Thrace
+414,Greece,483,Thessaloniki,40.6393495,22.9446064,Macedonia,,"Thrace, Thessaly, Sofia, Epirus, Central Greece, Aegean Islands, Povardarie, Western Macedonia, Eastern Macedonia, Southeastern Albania",https://www.erepublik.com/en/main/region/Macedonia
+415,Greece,490,Larissa,39.6390224,22.4191254,Thessaly,,"Central Greece, Macedonia, Epirus",https://www.erepublik.com/en/main/region/Thessaly
+416,Greece,484,Ioannina,39.6675,20.85083,Epirus,,"Thessaly, Central Greece, Macedonia, Ionian Islands, Albanian Coast, Southeastern Albania",https://www.erepublik.com/en/main/region/Epirus
+417,Greece,485,Lamia,38.8959734,22.4349003,Central Greece,,"Thessaly, Attica, Peloponnese, Epirus, Macedonia, Aegean Islands, Ionian Islands",https://www.erepublik.com/en/main/region/Central-Greece
+418,Greece,238,Athens,37.9837155,23.7293097,Attica,,"Central Greece, Peloponnese, Aegean Islands, Crete",https://www.erepublik.com/en/main/region/Attica
+419,Greece,486,Tripoli,37.5101357,22.372644,Peloponnese,"Fish, Cattle","Attica, Central Greece, Aegean Islands, Crete, Ionian Islands",https://www.erepublik.com/en/main/region/Peloponnese
+420,Greece,489,Chios,38.3709813,26.1363457,Aegean Islands,,"Crete, Peloponnese, Attica, Marmara, Macedonia, Aegean Coast of Turkey, Central Greece, Thrace, Mediterranean Coast of Turkey, Southern Cyprus, Lower Egypt",https://www.erepublik.com/en/main/region/Aegean-Islands
+421,Greece,488,Corfu,39.6118388,19.8306051,Ionian Islands,,"Epirus, Apulia, Central Greece, Peloponnese, Albanian Coast",https://www.erepublik.com/en/main/region/Ionian-Islands
+422,Greece,487,Heraklion,35.3387352,25.1442126,Crete,"Fruits, Magnesium","Tel Aviv Center District, Aegean Islands, Attica, Peloponnese, Lower Egypt",https://www.erepublik.com/en/main/region/Crete
+423,Poland,402,Olsztyn,53.778422,20.4801193,Mazuria,,"Pomerania, Mazovia, Kaliningrad, Dainava, Sudovia",https://www.erepublik.com/en/main/region/Mazuria
+424,Poland,231,Warsaw,52.2296756,21.0122287,Mazovia,"Sand, Clay, Wood, Granite","Mazuria, Little Poland, Great Poland, Pomerania, Dainava, Sudovia, Brestskaya, Hrodzienskaya, Silesia",https://www.erepublik.com/en/main/region/Mazovia
+425,Poland,391,Krakow,50.0646501,19.9449799,Little Poland,,"Galicia and Lodomeria, Mazovia, Silesia, Central Slovakia, Great Poland, Volhynia, Subcarpathia, Eastern Slovakia, Brestskaya",https://www.erepublik.com/en/main/region/Little-Poland
+426,Poland,390,Poznan,52.406374,16.9251681,Great Poland,,"Silesia, Pomerania, Mazovia, Brandenburg and Berlin, Little Poland",https://www.erepublik.com/en/main/region/Great-Poland
+437,Czech Republic,471,Plzen,49.7384252,13.37362,Southern Bohemia,Iron,"Northern Bohemia, Upper Austria, Lower Austria, Moravia, Bavaria, Saxony",https://www.erepublik.com/en/main/region/Southern-Bohemia
+440,Czech Republic,479,Brno,49.1950602,16.6068371,Moravia,,"Northern Bohemia, Central Slovakia, Lower Austria, Southern Bohemia, Silesia, Western Slovakia",https://www.erepublik.com/en/main/region/Moravia
+442,Czech Republic,229,Prague,50.0755381,14.4378005,Northern Bohemia,Sand,"Southern Bohemia, Moravia, Saxony, Silesia",https://www.erepublik.com/en/main/region/Northern-Bohemia
+443,India,241,New Delhi,28.635308,77.22496,Northern India,,"Rajasthan, Uttar Pradesh, Jammu and Kashmir, Punjab, Tibet",https://www.erepublik.com/en/main/region/Northern-India
+445,India,491,Lucknow,26.8465108,80.9466832,Uttar Pradesh,,"Madhya Pradesh, Rajasthan, Northern India, Bihar",https://www.erepublik.com/en/main/region/Uttar-Pradesh
+446,India,492,Jaipur,26.9124165,75.7872879,Rajasthan,,"Madhya Pradesh, Gujarat, Northern India, Uttar Pradesh, Punjab, Sindh",https://www.erepublik.com/en/main/region/Rajasthan
+447,India,493,Bhopal,23.2599333,77.412615,Madhya Pradesh,,"Rajasthan, Uttar Pradesh, Gujarat, Chhattisgarh, Maharashtra, Bihar",https://www.erepublik.com/en/main/region/Madhya-Pradesh
+448,India,494,Gandhinagar,23.2248196,72.6463769,Gujarat,,"Madhya Pradesh, Rajasthan, Maharashtra, Sindh",https://www.erepublik.com/en/main/region/Gujarat
+449,India,495,Mumbai,19.0759837,72.8776559,Maharashtra,"Neodymium, Cobalt, Titanium, Wolfram","Gujarat, Andhra Pradesh, Madhya Pradesh, Karnataka, Chhattisgarh",https://www.erepublik.com/en/main/region/Maharashtra
+450,India,496,Hyderabad,17.385044,78.486671,Andhra Pradesh,,"Tamil Nadu, Chhattisgarh, Maharashtra, Karnataka, Orissa",https://www.erepublik.com/en/main/region/Andhra-Pradesh
+451,India,497,Bangalore,12.9715987,77.5945627,Karnataka,"Grain, Fruits, Cattle, Deer","Kerala, Tamil Nadu, Maharashtra, Andhra Pradesh",https://www.erepublik.com/en/main/region/Karnataka
+452,India,498,Chennai,13.060422,80.249583,Tamil Nadu,Fish,"Karnataka, Andhra Pradesh, Southern Thailand, Kerala",https://www.erepublik.com/en/main/region/Tamil-Nadu
+453,India,499,Thiruvananthapuram,8.4874949,76.948623,Kerala,Aluminum,"Karnataka, Tamil Nadu",https://www.erepublik.com/en/main/region/Kerala
+454,India,500,Bhubaneswar,20.2960587,85.8245398,Orissa,,"Chhattisgarh, Jharkhand, West Bengal, Andhra Pradesh",https://www.erepublik.com/en/main/region/Orissa
+455,India,501,Raipur,21.2513844,81.6296413,Chhattisgarh,,"Madhya Pradesh, Orissa, Andhra Pradesh, Jharkhand, Maharashtra",https://www.erepublik.com/en/main/region/Chhattisgarh
+456,India,502,Ranchi,23.3440997,85.309562,Jharkhand,,"Orissa, West Bengal, Bihar, Chhattisgarh",https://www.erepublik.com/en/main/region/Jharkhand
+457,India,503,Calcutta,22.572646,88.363895,West Bengal,,"Orissa, Jharkhand, North Eastern India, Bihar, Tibet",https://www.erepublik.com/en/main/region/West-Bengal
+458,India,504,Patna,25.61046,85.141667,Bihar,,"Uttar Pradesh, Jharkhand, West Bengal, Madhya Pradesh",https://www.erepublik.com/en/main/region/Bihar
+459,India,505,Shillong,25.5787726,91.8932535,North Eastern India,,"West Bengal, Tibet",https://www.erepublik.com/en/main/region/North-Eastern-India
+460,Indonesia,506,Medan,3.585242,98.6755979,Sumatra,"Grain, Fruits, Cattle, Deer","Java, Southern Thailand, Peninsular Malaysia, Singapore City, Sarawak, Kalimantan",https://www.erepublik.com/en/main/region/Sumatra
+461,Indonesia,242,Jakarta,-6.211544,106.845172,Java,,"Sumatra, Lesser Sunda Islands, Western Australia, Kalimantan",https://www.erepublik.com/en/main/region/Java
+462,Indonesia,508,Samarinda,-0.502183,117.153801,Kalimantan,,"Sulawesi, Lesser Sunda Islands, Sabah, Sarawak, Peninsular Malaysia, Mindanao, Sumatra, Java",https://www.erepublik.com/en/main/region/Kalimantan
+463,Indonesia,507,Mataram,-8.5833333,116.1166667,Lesser Sunda Islands,"Grain, Fish","Java, Sulawesi, Kalimantan, Western Australia, Northern Territory, Maluku islands",https://www.erepublik.com/en/main/region/Lesser-Sunda-Islands
+464,Indonesia,509,Palu,-0.898583,119.850601,Sulawesi,,"Maluku islands, Lesser Sunda Islands, Kalimantan, Mindanao",https://www.erepublik.com/en/main/region/Sulawesi
+465,Indonesia,510,Ambon,-3.65607,128.166419,Maluku islands,"Neodymium, Magnesium, Cobalt, Wolfram","Sulawesi, Papua, Northern Territory, Mindanao, Lesser Sunda Islands",https://www.erepublik.com/en/main/region/Maluku-islands
+466,Indonesia,511,Jayapura,-2.541279,140.71373,Papua,,"Maluku islands, Queensland, Northern Territory, Hawaii",https://www.erepublik.com/en/main/region/Papua
+467,Israel,512,Jerusalem,31.768319,35.21371,Jerusalem district,"Iron, Saltpeter, Aluminum, Oil","Beersheba South District, Tel Aviv Center District",https://www.erepublik.com/en/main/region/Jerusalem-district
+468,Israel,513,Nazareth,32.699635,35.303546,Nazareth North District,"Fish, Iron","Haifa district, Tel Aviv Center District, Southern Cyprus",https://www.erepublik.com/en/main/region/Nazareth-North-District
+469,Israel,514,Haifa,32.830361,34.974338,Haifa district,,"Tel Aviv Center District, Nazareth North District, Mediterranean Coast of Turkey",https://www.erepublik.com/en/main/region/Haifa-district
+470,Israel,515,Tel Aviv,32.066158,34.777819,Tel Aviv Center District,,"Haifa district, Jerusalem district, Nazareth North District, Crete, Beersheba South District",https://www.erepublik.com/en/main/region/Tel-Aviv-Center-District
+471,Israel,516,Beersheba,31.252973,34.791462,Beersheba South District,"Fish, Fruits, Cattle","Jerusalem district, Sinai, Al Jawf, Tel Aviv Center District",https://www.erepublik.com/en/main/region/Beersheba-South-District
+472,Iran,521,Kerman,30.28027,57.06702,Kerman Province,,"Hormozgan, South Khorasan, Yazd, Fars, Sistan and Baluchistan",https://www.erepublik.com/en/main/region/Kerman-Province
+473,Iran,520,Zahedan,29.4963889,60.8627778,Sistan and Baluchistan,"Saltpeter, Aluminum, Oil, Rubber","Hormozgan, South Khorasan, Kerman Province, Balochistan",https://www.erepublik.com/en/main/region/Sistan-Baluchistan
+474,Iran,526,Birjand,32.880299,59.210411,South Khorasan,,"Razavi Khorasan, Yazd, Kerman Province, Sistan and Baluchistan, Semnan, Esfahan",https://www.erepublik.com/en/main/region/South-Khorasan
+475,Iran,525,Mashhad,36.3,59.6,Razavi Khorasan,,"South Khorasan, Mazandaran and Golistan, Semnan",https://www.erepublik.com/en/main/region/Razavi-Khorasan
+476,Iran,522,Yazd,31.89661,54.36068,Yazd,,"South Khorasan, Esfahan, Kerman Province, Fars",https://www.erepublik.com/en/main/region/Yazd
+477,Iran,524,Semnan,35.572269,53.396049,Semnan,"Grain, Fruits, Cattle, Deer","Northwestern Iran, Mazandaran and Golistan, Esfahan, South Khorasan, Razavi Khorasan",https://www.erepublik.com/en/main/region/Semnan
+478,Iran,523,Isfahan,32.65139,51.679192,Esfahan,,"Southwestern Iran, Yazd, Fars, Northwestern Iran, Semnan, Hormozgan, South Khorasan",https://www.erepublik.com/en/main/region/Esfahan
+479,Iran,518,Shiraz,29.6166667,52.5333333,Fars,,"Hormozgan, Esfahan, Kerman Province, Yazd, Southwestern Iran",https://www.erepublik.com/en/main/region/Fars
+480,Iran,519,Bandar Abbas,27.1833333,56.2666667,Hormozgan,,"Kerman Province, Fars, Sistan and Baluchistan, Esfahan, Ras al-Khaimah, Umm al Quwain, Fujairah, Eastern Province, Southwestern Iran",https://www.erepublik.com/en/main/region/Hormozgan
+481,Iran,528,Ahvaz,31.31671,48.68438,Southwestern Iran,,"Esfahan, Fars, Northwestern Iran, Hormozgan",https://www.erepublik.com/en/main/region/Southwestern-Iran
+482,Iran,517,Tehran,35.6961111,51.4230556,Northwestern Iran,,"Mazandaran and Golistan, Esfahan, Semnan, Eastern Anatolia, Southwestern Iran, Syunik",https://www.erepublik.com/en/main/region/Northwestern-Iran
+483,Iran,527,Gorgan,36.8386111,54.4347222,Mazandaran and Golistan,"Neodymium, Cobalt","Razavi Khorasan, Northwestern Iran, Semnan, Volga",https://www.erepublik.com/en/main/region/Mazandaran-and-Golistan
+484,Japan,529,Sapporo,43.0620958,141.3543763,Hokkaido,,"Tohoku, Far Eastern Russia, Alaska",https://www.erepublik.com/en/main/region/Hokkaido
+485,Japan,530,Sendai,38.268215,140.8693558,Tohoku,,"Hokkaido, Kanto, Chubu, Hamgyong",https://www.erepublik.com/en/main/region/Tohoku
+486,Japan,239,Tokyo,35.6894875,139.6917064,Kanto,"Fish, Fruits, Cattle","Chubu, Tohoku",https://www.erepublik.com/en/main/region/Kanto
+487,Japan,531,Nagoya,35.1814464,136.906398,Chubu,,"Kinki, Kanto, Tohoku",https://www.erepublik.com/en/main/region/Chubu
+488,Japan,532,Osaka,34.6937378,135.5021651,Kinki,"Magnesium, Titanium, Wolfram","Chugoku, Shikoku, Chubu",https://www.erepublik.com/en/main/region/Kinki
+489,Japan,533,Hiroshima,34.3852029,132.4552927,Chugoku,"Sand, Wood","Kyushu, Shikoku, Kinki, Gyeongsangbuk-do, Gyeongsangnam-do",https://www.erepublik.com/en/main/region/Chugoku
+490,Japan,534,Matsuyama,33.8391574,132.7655752,Shikoku,,"Kyushu, Chugoku, Kinki",https://www.erepublik.com/en/main/region/Shikoku
+491,Japan,535,Fukuoka,33.5903547,130.4017155,Kyushu,,"Chugoku, Shikoku, Gyeongsangnam-do, Jeju, Hawaii, Shanghai, Zhejiang, Fujian, Eastern Taiwan",https://www.erepublik.com/en/main/region/Kyushu
+492,Pakistan,536,Quetta,30.209459,67.018173,Balochistan,"Fish, Iron, Magnesium, Titanium","Sindh, North-West Frontier Province, Punjab, Sistan and Baluchistan",https://www.erepublik.com/en/main/region/Balochistan
+493,Pakistan,537,Peshawar,34.004299,71.54483,North-West Frontier Province,"Grain, Fruits, Cattle, Deer","Punjab, Balochistan, Jammu and Kashmir, Xinjiang",https://www.erepublik.com/en/main/region/North-West-Frontier
+494,Pakistan,540,Islamabad,33.718151,73.060547,Punjab,Fish,"North-West Frontier Province, Balochistan, Rajasthan, Jammu and Kashmir, Northern India, Sindh",https://www.erepublik.com/en/main/region/Punjab
+495,Pakistan,539,Karachi,24.893379,67.0280609,Sindh,Sand,"Balochistan, Gujarat, Rajasthan, Punjab",https://www.erepublik.com/en/main/region/Sindh
+497,South Africa,542,Bhisho,-32.8494444,27.4380556,Eastern Cape,,"Western Cape, Free State, KwaZulu Natal, Western Australia, Northern Cape",https://www.erepublik.com/en/main/region/Eastern-Cape
+498,South Africa,543,Bloemfontein,-29.118349,26.22492,Free State,"Iron, Cobalt","Northern Cape, Eastern Cape, North West Province, KwaZulu Natal, Gauteng, Mpumalanga",https://www.erepublik.com/en/main/region/Free-State
+499,South Africa,541,Pretoria,-25.73134,28.21837,Gauteng,"Neodymium, Magnesium, Titanium, Wolfram","North West Province, Mpumalanga, Limpopo, Free State",https://www.erepublik.com/en/main/region/Gauteng
+500,South Africa,544,Pietermaritzburg,-29.6178994,30.3824892,KwaZulu Natal,,"Eastern Cape, Free State, Western Australia, Mpumalanga",https://www.erepublik.com/en/main/region/KwaZulu-Natal
+501,South Africa,545,Polokwane,-23.891581,29.4496,Limpopo,"Saltpeter, Aluminum, Oil, Rubber","Mpumalanga, Gauteng, North West Province",https://www.erepublik.com/en/main/region/Limpopo
+502,South Africa,546,Nelspruit,-25.4658333,30.9852778,Mpumalanga,,"Gauteng, Limpopo, KwaZulu Natal, Free State",https://www.erepublik.com/en/main/region/Mpumalanga
+503,South Africa,548,Mmabatho,-25.8377623,25.594752,North West Province,,"Gauteng, Free State, Northern Cape, Northern Cape, Limpopo",https://www.erepublik.com/en/main/region/North-West-Province
+504,South Africa,547,Kimberley,-28.72929,24.75404,Northern Cape,,"Free State, Parana and Santa Catarina, Western Cape, Eastern Cape, North West Province, North West Province, Rio Grande do Sul, South South States",https://www.erepublik.com/en/main/region/Northern-Cape
+505,South Africa,549,Cape Town,-33.9248685,18.4240553,Western Cape,,"Eastern Cape, Pampas, Northern Cape, Charrua",https://www.erepublik.com/en/main/region/Western-Cape
+507,Thailand,550,Bangkok,13.7522222,100.4938889,Central Thailand,"Cobalt, Titanium, Wolfram","North-Eastern Thailand, Eastern Thailand, Southern Thailand, Northern Thailand",https://www.erepublik.com/en/main/region/Central-Thailand
+508,Thailand,551,Chiang Mai,18.7964642,98.6600586,Northern Thailand,"Saltpeter, Aluminum, Oil","North-Eastern Thailand, Central Thailand",https://www.erepublik.com/en/main/region/Northern-Thailand
+509,Thailand,553,Rayong,12.8308447,101.4339148,Eastern Thailand,,"Central Thailand, Southern Thailand",https://www.erepublik.com/en/main/region/Eastern-Thailand
+510,Thailand,554,Hat Yai,7.0019444,100.4572222,Southern Thailand,,"Eastern Thailand, Sumatra, Tamil Nadu, Peninsular Malaysia, Central Thailand",https://www.erepublik.com/en/main/region/Southern-Thailand
+511,Thailand,552,Khon Kaen,15.9717357,102.6216211,North-Eastern Thailand,"Iron, Magnesium","Central Thailand, Northern Thailand",https://www.erepublik.com/en/main/region/North-Eastern-Thailand
+512,Turkey,555,Izmir,38.41885,27.12872,Aegean Coast of Turkey,Titanium,"Marmara, Mediterranean Coast of Turkey, Central Anatolia, Black Sea Coast of Turkey, Aegean Islands",https://www.erepublik.com/en/main/region/Aegean-Coast-of-Turkey
+513,Turkey,558,Samsun,41.292782,36.33128,Black Sea Coast of Turkey,,"Central Anatolia, Eastern Anatolia, Marmara, Aegean Coast of Turkey, Dobrogea, North Caucasus, Taurida, Abkhazia, West Georgia, Burgas, Varna",https://www.erepublik.com/en/main/region/Black-Sea-Coast-of-Turkey
+514,Turkey,237,Ankara,39.92077,32.85411,Central Anatolia,,"Black Sea Coast of Turkey, Mediterranean Coast of Turkey, Aegean Coast of Turkey, Eastern Anatolia, Marmara",https://www.erepublik.com/en/main/region/Central-Anatolia
+515,Turkey,557,Erzurum,39.9,41.27,Eastern Anatolia,,"Southeastern Anatolia, Black Sea Coast of Turkey, Northwestern Iran, Central Anatolia, Mediterranean Coast of Turkey, West Georgia, Lower Kartli, Northern Armenia, Central Armenia",https://www.erepublik.com/en/main/region/Eastern-Anatolia
+516,Turkey,556,Istanbul,41.00527,28.97696,Marmara,,"Aegean Coast of Turkey, Burgas, Thrace, Plovdiv, Black Sea Coast of Turkey, Aegean Islands, Central Anatolia",https://www.erepublik.com/en/main/region/Marmara
+517,Turkey,559,Antalya,36.88414,30.70563,Mediterranean Coast of Turkey,,"Central Anatolia, Southeastern Anatolia, Aegean Coast of Turkey, Eastern Anatolia, Haifa district, Aegean Islands, Northern Cyprus, Lower Egypt",https://www.erepublik.com/en/main/region/Mediterranean-Coast-of-Turkey
+518,Turkey,560,Diyarbakir,37.9144099,40.230629,Southeastern Anatolia,,"Mediterranean Coast of Turkey, Eastern Anatolia",https://www.erepublik.com/en/main/region/Southeastern-Anatolia
+519,South Korea,240,Seoul,37.566535,126.9779692,Gyeonggi-do,,"Gangwon-do, Chungcheongbuk-do, Shandong, Chungcheongnam-do, Kangwon",https://www.erepublik.com/en/main/region/Gyeonggi
+520,South Korea,561,Chuncheon,37.8813153,127.7299707,Gangwon-do,,"Gyeonggi-do, Kangwon, Gyeongsangbuk-do, Chungcheongbuk-do",https://www.erepublik.com/en/main/region/Gangwon
+521,South Korea,562,Cheongju,36.6424341,127.4890319,Chungcheongbuk-do,,"Chungcheongnam-do, Gyeongsangbuk-do, Gyeonggi-do, Jeollabuk-do, Gangwon-do",https://www.erepublik.com/en/main/region/Chungcheongbuk
+522,South Korea,563,Daejeon,36.3504119,127.3845475,Chungcheongnam-do,Magnesium,"Chungcheongbuk-do, Jeollabuk-do, Shandong, Gyeonggi-do, Jiangsu",https://www.erepublik.com/en/main/region/Chungcheongnam
+523,South Korea,565,Jeonju,35.8242238,127.1479532,Jeollabuk-do,,"Gyeongsangnam-do, Gyeongsangbuk-do, Chungcheongnam-do, Jeollanam-do, Jiangsu, Chungcheongbuk-do, Shandong",https://www.erepublik.com/en/main/region/Jeollabuk
+524,South Korea,570,Muan,34.9904542,126.4816856,Jeollanam-do,"Fish, Iron, Magnesium","Jeollabuk-do, Jeju, Jiangsu, Gyeongsangnam-do, Northern Taiwan",https://www.erepublik.com/en/main/region/Jeollanam
+525,South Korea,566,Daegu,35.8714354,128.601445,Gyeongsangbuk-do,,"Gyeongsangnam-do, Chungcheongbuk-do, Jeollabuk-do, Chugoku, Gangwon-do",https://www.erepublik.com/en/main/region/Gyeongsangbuk
+526,South Korea,567,Changwon,35.2708333,128.6630556,Gyeongsangnam-do,"Titanium, Wolfram","Gyeongsangbuk-do, Jeollabuk-do, Chugoku, Kyushu, Jeollanam-do",https://www.erepublik.com/en/main/region/Gyeongsangnam
+527,South Korea,568,Jeju City,33.4996213,126.5311884,Jeju,"Grain, Fish, Fruits, Cattle","Jeollanam-do, Jiangsu, Kyushu",https://www.erepublik.com/en/main/region/Jeju
+528,Netherlands,144,Amsterdam,52.3702157,4.8951679,Western Netherlands,"Grain, Fruits, Cattle, Deer","Eastern Netherlands, Northern Netherlands, Southern Netherlands",https://www.erepublik.com/en/main/region/Western-Netherlands
+529,Netherlands,152,Maastricht,50.8513682,5.6909725,Southern Netherlands,"Limestone, Cobalt, Titanium, Wolfram","Eastern Netherlands, North Rhine-Westphalia, Wallonia, Flanders, Western Netherlands, East of England",https://www.erepublik.com/en/main/region/Southern-Netherlands
+530,Netherlands,153,Arnhem,51.9851034,5.8987296,Eastern Netherlands,"Fish, Magnesium","Western Netherlands, Northern Netherlands, Southern Netherlands, Lower Saxony and Bremen, North Rhine-Westphalia",https://www.erepublik.com/en/main/region/Eastern-Netherlands
+531,Netherlands,379,Groningen,53.2193835,6.5665018,Northern Netherlands,,"Eastern Netherlands, Western Netherlands, Lower Saxony and Bremen, Vestlandet",https://www.erepublik.com/en/main/region/Northern-Netherlands
+532,Russia,235,Moscow,55.7512419,37.6184217,Moscow and Central Russia,,"Northern Russia, Central Black Earth, Volga Vyatka, Leningrad Oblast, Volga, Siveria, Kirde-Eesti, Kesk-Eesti, Louna-Eesti, Latgale, Homelskaya, Mahilyowskaya, Vitsebskaya",https://www.erepublik.com/en/main/region/Moscow-and-Central-Russia
+533,Russia,571,Voronezh,51.6568874,39.2025339,Central Black Earth,,"Moscow and Central Russia, North Caucasus, Sloboda, Volga, Siveria, Donbas",https://www.erepublik.com/en/main/region/Central-Black-Earth
+534,Russia,573,Krasnoyarsk,56.0107893,92.8527745,Eastern Siberia,"Neodymium, Cobalt","Far Eastern Russia, Western Siberia, Inner Mongolia",https://www.erepublik.com/en/main/region/Eastern-Siberia
+535,Russia,574,Khabarovsk,48.485637,135.0795875,Far Eastern Russia,,"Eastern Siberia, Heilongjiang, Jilin, Hokkaido, Alaska, Hamgyong",https://www.erepublik.com/en/main/region/Far-Eastern-Russia
+536,Russia,575,Arhangelsk,64.5470519,40.5520904,Northern Russia,,"Leningrad Oblast, Moscow and Central Russia, Volga Vyatka, Lapland, Oulu, Eastern Finland, Nord-Norge, Urals, Western Siberia",https://www.erepublik.com/en/main/region/Northern-Russia
+537,Russia,576,Rostov on Don,47.233333,39.7,North Caucasus,,"Central Black Earth, Volga, Donbas, Taurida, Black Sea Coast of Turkey, Abkhazia, West Georgia, Inner Kartli, Kakheti",https://www.erepublik.com/en/main/region/North-Caucasus
+538,Russia,572,St Petersburg,59.9395237,30.3120206,Leningrad Oblast,,"Northern Russia, Moscow and Central Russia, Southern Finland, Eastern Finland, Kaliningrad",https://www.erepublik.com/en/main/region/Leningrad-Oblast
+540,Russia,578,Yekaterinburg,56.8375237,60.6032718,Urals,,"Volga Vyatka, Western Siberia, Volga, Northern Russia",https://www.erepublik.com/en/main/region/Urals
+541,Russia,579,Nizhny Novgorod,56.3278517,44.0006851,Volga Vyatka,"Grain, Fruits, Cattle, Deer","Moscow and Central Russia, Volga, Northern Russia, Urals",https://www.erepublik.com/en/main/region/Volga-Vyatka
+542,Russia,580,Novosibirsk,55.0300636,82.9199423,Western Siberia,"Saltpeter, Aluminum, Oil, Rubber","Eastern Siberia, Urals, Xinjiang, Northern Russia",https://www.erepublik.com/en/main/region/Western-Siberia
+543,Russia,581,Kaliningrad,54.7102892,20.5090155,Kaliningrad,,"Mazuria, Pomerania, Lithuania Minor, Sudovia, Leningrad Oblast",https://www.erepublik.com/en/main/region/Kaliningrad
+544,Russia,577,Volgograd,48.7098776,44.5227496,Volga,,"Volga Vyatka, North Caucasus, Urals, Moscow and Central Russia, Central Black Earth, Mazandaran and Golistan",https://www.erepublik.com/en/main/region/Volga
+549,Sweden,585,Visby,57.6348,18.29484,Gotland,,"Svealand, Gotaland, Smaland, Kurzeme",https://www.erepublik.com/en/main/region/Gotland
+561,India,591,Srinagar,34.0836581,74.7973681,Jammu and Kashmir,,"North-West Frontier Province, Punjab, Northern India, Tibet, Xinjiang",https://www.erepublik.com/en/main/region/Jammu-Kashmir
+562,Norway,592,Longyearbyen,78.22,15.65,Svalbard & Jan Mayen,"Grain, Deer, Limestone",Nord-Norge,https://www.erepublik.com/en/main/region/Svalbard-Jan-Mayen
+571,Slovenia,601,Nova Gorica,45.9572332,13.6482866,Slovenian Littoral,"Sand, Wood","Istria and Kvarner, Friuli-Venezia Giulia, Upper Carniola, Inner Carniola, Lower Carniola, Carinthia",https://www.erepublik.com/en/main/region/Slovenian-Littoral
+581,Slovenia,611,Postojna,45.7750626,14.213397,Inner Carniola,,"Lower Carniola, Istria and Kvarner, Slovenian Littoral",https://www.erepublik.com/en/main/region/Inner-Carniola
+591,Slovenia,631,Kranj,46.2392066,14.3556543,Upper Carniola,"Sand, Magnesium","Slovenian Littoral, Carinthia, Styria and Carinthia, Lower Carniola",https://www.erepublik.com/en/main/region/Upper-Carniola
+601,Slovenia,641,Maribor,46.5573993,15.645982,Styria and Carinthia,"Fish, Fruits","Upper Carniola, Lower Carniola, Carinthia, Styria, Prekmurje, Northwest Croatia",https://www.erepublik.com/en/main/region/Styria-Carinthia
+611,Slovenia,651,Ljubljana,46.0514263,14.5059655,Lower Carniola,Titanium,"Central Croatia, Lika and Gorski Kotar, Istria and Kvarner, Slovenian Littoral, Upper Carniola, Styria and Carinthia, Inner Carniola",https://www.erepublik.com/en/main/region/Lower-Carniola
+621,Slovenia,661,Murska Sobota,46.6612399,16.1649037,Prekmurje,"Iron, Oil, Clay","Northwest Croatia, Styria and Carinthia, Western Transdanubia, Burgenland",https://www.erepublik.com/en/main/region/Prekmurje
+622,Croatia,662,Osijek,45.5549624,18.6955144,Slavonia,,"Southern Transdanubia, Central Croatia, Northwest Croatia, Vojvodina, West Srpska Republic, Brcko District, Southern Great Plain",https://www.erepublik.com/en/main/region/Slavonia
+623,Croatia,663,Zagreb,45.8130293,15.9778949,Central Croatia,,"Slavonia, Lower Carniola, Northwest Croatia, Lika and Gorski Kotar, West Srpska Republic, Federation of BiH",https://www.erepublik.com/en/main/region/Central-Croatia
+624,Croatia,664,Varazdin,46.305746,16.3366066,Northwest Croatia,,"Slavonia, Central Croatia, Western Transdanubia, Prekmurje, Styria and Carinthia",https://www.erepublik.com/en/main/region/Northwest-Croatia
+625,Croatia,665,Karlovac,45.4928973,15.5552683,Lika and Gorski Kotar,"Grain, Fish, Fruits, Cattle","Central Croatia, Lower Carniola, Istria and Kvarner, North Dalmatia, Federation of BiH",https://www.erepublik.com/en/main/region/Lika-Gorski-Kotar
+626,Croatia,666,Rijeka,45.3270631,14.442176,Istria and Kvarner,,"Lika and Gorski Kotar, Lower Carniola, Inner Carniola, Slovenian Littoral",https://www.erepublik.com/en/main/region/Istria-Kvarner
+627,Croatia,667,Zadar,44.1193923,15.2329111,North Dalmatia,"Iron, Aluminum, Oil, Rubber","Lika and Gorski Kotar, South Dalmatia, Federation of BiH",https://www.erepublik.com/en/main/region/North-Dalmatia
+628,Croatia,668,Split,43.5081323,16.4401935,South Dalmatia,"Fruits, Cattle","North Dalmatia, Federation of BiH, Montenegrin Coast, Apulia, East Srpska Republic",https://www.erepublik.com/en/main/region/South-Dalmatia
+629,Chile,669,Antofagasta,-23.65,-70.4,Norte Grande,,"Norte Chico, Argentine Northwest, Bolivian Altiplano, Low Andes",https://www.erepublik.com/en/main/region/Norte-Grande
+630,Chile,670,La Serena,-29.906301,-71.250204,Norte Chico,,"Norte Grande, Argentine Northwest, Cuyo, Zona Central",https://www.erepublik.com/en/main/region/Norte-Chico
+631,Chile,671,Santiago,-33.4691199,-70.641997,Zona Central,Fish,"Cuyo, Patagonia, Zona Sur, Norte Chico, Auckland",https://www.erepublik.com/en/main/region/Zona-Central
+632,Chile,672,Temuco,-38.73383,-72.584496,Zona Sur,,"Zona Central, Patagonia, Zona Austral, Wellington, Canterbury",https://www.erepublik.com/en/main/region/Zona-Sur
+633,Chile,673,Punta Arenas,-53.154478,-70.916476,Zona Austral,Limestone,"Zona Sur, Patagonia, Otago",https://www.erepublik.com/en/main/region/Zona-Austral
+634,Serbia,675,Novi Sad,45.262231,19.851858,Vojvodina,,"Belgrade, Eastern Serbia, Western Serbia, Slavonia, Southern Great Plain, Banat, East Srpska Republic, Brcko District",https://www.erepublik.com/en/main/region/Vojvodina
+635,Serbia,676,Belgrade,44.8205556,20.4622222,Belgrade,"Iron, Aluminum, Oil","Vojvodina, Vojvodina, Sumadija, Western Serbia",https://www.erepublik.com/en/main/region/Belgrade
+636,Serbia,679,Kragujevac,44.012711,20.926741,Sumadija,"Fish, Fruits, Cattle","Belgrade, Eastern Serbia, Western Serbia, Raska, Southern Serbia",https://www.erepublik.com/en/main/region/Sumadija
+637,Serbia,681,Zajecar,43.916667,22.3,Eastern Serbia,,"Vojvodina, Sumadija, Southern Serbia, Banat, Oltenia, Vidin",https://www.erepublik.com/en/main/region/Eastern-Serbia
+638,Serbia,682,Uzice,43.86417,19.850031,Western Serbia,,"Vojvodina, Belgrade, Sumadija, Raska, East Srpska Republic, North Montenegrin Mountains",https://www.erepublik.com/en/main/region/Western-Serbia
+639,Serbia,684,Kraljevo,43.723433,20.6871,Raska,Titanium,"Sumadija, Western Serbia, Southern Serbia, North Montenegrin Mountains, Kosovo",https://www.erepublik.com/en/main/region/Raska
+640,Serbia,685,Nis,43.32472,21.90333,Southern Serbia,"Iron, Aluminum","Sumadija, Eastern Serbia, Raska, Vidin, Sofia, Eastern Macedonia, Kosovo",https://www.erepublik.com/en/main/region/Southern-Serbia
+641,Malaysia,677,Kota Kinabalu,5.976474,116.115777,Sabah,"Magnesium, Wolfram","Sarawak, Kalimantan, Palawan, Mindanao",https://www.erepublik.com/en/main/region/Sabah
+642,Malaysia,678,Kuching,1.530976,110.3442199,Sarawak,"Grain, Fruits, Cattle","Sabah, Kalimantan, Peninsular Malaysia, Sumatra",https://www.erepublik.com/en/main/region/Sarawak
+643,Malaysia,680,Kuala Lumpur,3.139003,101.686855,Peninsular Malaysia,"Sand, Clay, Wood, Magnesium","Sarawak, Singapore City, Sumatra, Kalimantan, Southern Thailand",https://www.erepublik.com/en/main/region/Peninsular-Malaysia
+644,Philippines,683,Manila,14.5995124,120.9842195,Luzon,Clay,"Palawan, Hainan, Guangdong, Visayas, Southern Taiwan",https://www.erepublik.com/en/main/region/Luzon
+645,Philippines,686,Cebu,10.3156992,123.8854366,Visayas,"Sand, Clay, Cobalt","Mindanao, Palawan, Luzon, Hawaii, Pacifica",https://www.erepublik.com/en/main/region/Visayas
+646,Philippines,687,Davao,7.190708,125.455341,Mindanao,"Sand, Clay","Sabah, Visayas, Palawan, Maluku islands, Sulawesi, Kalimantan",https://www.erepublik.com/en/main/region/Mindanao
+647,Philippines,688,Puerto Princesa,9.9672163,118.78551,Palawan,"Clay, Wood, Limestone, Granite","Sabah, Luzon, Visayas, Mindanao",https://www.erepublik.com/en/main/region/Palawan
+648,Singapore,674,Downtown Core,1.2866961,103.8535097,Singapore City,"Clay, Wood, Limestone, Neodymium","Peninsular Malaysia, Sumatra",https://www.erepublik.com/en/main/region/Singapore-City
+649,Bosnia and Herzegovina,692,Banja Luka,44.7666667,17.1833333,West Srpska Republic,"Fish, Fruits, Cattle","Central Croatia, Federation of BiH, Slavonia, Brcko District",https://www.erepublik.com/en/main/region/West-Srpska-Republic
+650,Bosnia and Herzegovina,691,Bijeljina,44.75,19.2166667,East Srpska Republic,"Fish, Sand","Brcko District, Federation of BiH, Vojvodina, Western Serbia, North Montenegrin Mountains, Central Montenegro, Montenegrin Coast, South Dalmatia",https://www.erepublik.com/en/main/region/East-Srpska-Republic
+651,Bosnia and Herzegovina,690,Brcko,44.87278,18.80833,Brcko District,,"West Srpska Republic, East Srpska Republic, Federation of BiH, Slavonia, Vojvodina",https://www.erepublik.com/en/main/region/Brcko-District
+652,Bosnia and Herzegovina,689,Sarajevo,43.85,18.25,Federation of BiH,Iron,"East Srpska Republic, Brcko District, West Srpska Republic, Central Croatia, Lika and Gorski Kotar, North Dalmatia, South Dalmatia",https://www.erepublik.com/en/main/region/Federation-of-BiH
+653,Brazil,693,Porto Alegre,-30.0277041,-51.2287346,Rio Grande do Sul,,"Parana and Santa Catarina, Mesopotamia, Northern Cape, Charrua",https://www.erepublik.com/en/main/region/Rio-Grande-do-Sul
+654,Estonia,694,Tallinn,59.4426896,24.7531972,Pohja-Eesti,"Fish, Fruits, Cattle, Limestone","Kesk-Eesti, Laane-Eesti, Southern Finland, Kirde-Eesti",https://www.erepublik.com/en/main/region/Pohja-Eesti
+655,Estonia,695,Narva,59.3741198,28.1822329,Kirde-Eesti,"Grain, Sand, Clay, Wood","Pohja-Eesti, Kesk-Eesti, Moscow and Central Russia, Pohja-Eesti, Louna-Eesti",https://www.erepublik.com/en/main/region/Kirde-Eesti
+656,Estonia,696,Viljandi,58.3676544,25.5953351,Kesk-Eesti,,"Pohja-Eesti, Kirde-Eesti, Moscow and Central Russia, Laane-Eesti, Louna-Eesti",https://www.erepublik.com/en/main/region/Kesk-Eesti
+657,Estonia,697,Parnu,58.387261,24.4973523,Laane-Eesti,,"Pohja-Eesti, Kesk-Eesti, Vidzeme, Kurzeme",https://www.erepublik.com/en/main/region/Laane-Eesti
+658,Estonia,698,Tartu,58.3708465,26.7147224,Louna-Eesti,"Titanium, Wolfram","Kesk-Eesti, Vidzeme, Moscow and Central Russia, Kirde-Eesti",https://www.erepublik.com/en/main/region/Louna-Eesti
+659,Latvia,699,Riga,56.9462031,24.1042872,Vidzeme,"Iron, Magnesium","Laane-Eesti, Louna-Eesti, Latgale, Zemgale",https://www.erepublik.com/en/main/region/Vidzeme
+660,Latvia,706,Daugavpils,55.8718512,26.5178205,Latgale,"Fish, Fruits","Moscow and Central Russia, Lithuanian Highland, Zemgale, Vidzeme, Vitsebskaya",https://www.erepublik.com/en/main/region/Latgale
+661,Latvia,701,Jelgava,56.6526079,23.7226585,Zemgale,,"Kurzeme, Latgale, Vidzeme, Lithuanian Highland, Samogitia",https://www.erepublik.com/en/main/region/Zemgale
+662,Latvia,709,Liepaja,56.5113106,21.0111931,Kurzeme,"Sand, Clay, Wood","Laane-Eesti, Zemgale, Samogitia, Gotland",https://www.erepublik.com/en/main/region/Kurzeme
+663,Lithuania,710,Klaipeda,55.7,21.133333,Lithuania Minor,"Iron, Aluminum, Oil","Samogitia, Kaliningrad, Sudovia, Scania",https://www.erepublik.com/en/main/region/Lithuania-Minor
+664,Lithuania,711,Telsiai,55.9835785,22.2508131,Samogitia,"Grain, Fruits, Cattle, Deer","Kurzeme, Zemgale, Lithuanian Highland, Lithuania Minor, Sudovia",https://www.erepublik.com/en/main/region/Samogitia
+665,Lithuania,712,Panevezys,55.7374357,24.3703332,Lithuanian Highland,"Fish, Neodymium, Cobalt","Latgale, Zemgale, Dainava, Sudovia, Samogitia, Vitsebskaya",https://www.erepublik.com/en/main/region/Lithuanian-Highland
+666,Lithuania,713,Vilnius,54.6893865,25.2800243,Dainava,,"Mazovia, Mazuria, Lithuanian Highland, Sudovia, Hrodzienskaya, Vitsebskaya",https://www.erepublik.com/en/main/region/Dainava
+667,Lithuania,714,Marijampole,54.557812,23.3498124,Sudovia,,"Dainava, Lithuanian Highland, Samogitia, Kaliningrad, Mazovia, Mazuria, Lithuania Minor",https://www.erepublik.com/en/main/region/Sudovia
+668,North Korea,715,Kanggye,40.9666667,126.6,Chagang,,"Jilin, Pyongan, Hamgyong, Ryanggang",https://www.erepublik.com/en/main/region/Chagang
+669,North Korea,716,Pyongyang,39.031859,125.753765,Pyongan,,"Chagang, Liaoning, Hamgyong, Kangwon, Hwangae, Jilin, Ryanggang",https://www.erepublik.com/en/main/region/Pyongan
+670,North Korea,717,Sariwŏn,38.50722,125.75583,Hwangae,"Grain, Saltpeter, Limestone, Magnesium","Pyongan, Kangwon",https://www.erepublik.com/en/main/region/Hwangae
+671,North Korea,718,Wonsan,39.1475,127.4461111,Kangwon,"Deer, Granite, Neodymium, Cobalt","Pyongan, Hamgyong, Hwangae, Gangwon-do, Gyeonggi-do",https://www.erepublik.com/en/main/region/Kangwon
+672,North Korea,719,Hamhung,39.9166667,127.5333333,Hamgyong,Fish,"Chagang, Pyongan, Ryanggang, Jilin, Far Eastern Russia, Kangwon, Tohoku",https://www.erepublik.com/en/main/region/Hamgyong
+673,North Korea,720,Hyesan,41.392761,128.168198,Ryanggang,,"Chagang, Jilin, Hamgyong, Pyongan",https://www.erepublik.com/en/main/region/Ryanggang
+674,Uruguay,721,Montevideo,-34.8836111,-56.1819444,Charrua,"Cattle, Wood, Limestone, Magnesium","Rio Grande do Sul, Pampas, Mesopotamia, Western Cape, South West States",https://www.erepublik.com/en/main/region/Charrua
+675,Paraguay,722,Asuncion,-25.2821972,-57.6351,Paranena,"Magnesium, Titanium, Wolfram","Mesopotamia, Parana and Santa Catarina, South East Chaco, Center West of Brazil, Central East Chaco",https://www.erepublik.com/en/main/region/Paranena
+676,Paraguay,723,Pozo Colorado,-22.633333,-60.5,Central East Chaco,"Saltpeter, Aluminum, Oil, Rubber","Argentine Northwest, South East Chaco, Center West of Brazil, Chuquisaca and Tarija, Santa Cruz, Paranena",https://www.erepublik.com/en/main/region/Central-East-Chaco
+677,Bolivia,724,Tarija,-21.531811,-64.731163,Chuquisaca and Tarija,,"Central East Chaco, Santa Cruz, Beni and Cochabamba, Bolivian Altiplano, Argentine Northwest",https://www.erepublik.com/en/main/region/Chuquisaca-and-Tarija
+678,Bolivia,725,Trinidad,-14.8333333,-64.9,Beni and Cochabamba,,"Chuquisaca and Tarija, Bolivian Altiplano, Pando, North of Brazil, Center West of Brazil, Santa Cruz",https://www.erepublik.com/en/main/region/Beni-and-Cochabamba
+679,Bolivia,726,Santa Cruz,-17.8666667,-63,Santa Cruz,,"Chuquisaca and Tarija, Central East Chaco, Center West of Brazil, Beni and Cochabamba",https://www.erepublik.com/en/main/region/Santa-Cruz
+680,Bolivia,727,La Paz,-16.4990099,-68.146248,Bolivian Altiplano,,"Chuquisaca and Tarija, Beni and Cochabamba, Pando, Argentine Northwest, Norte Grande, Low Andes, Southern Low Amazon",https://www.erepublik.com/en/main/region/Bolivian-Altiplano
+681,Bolivia,728,Cobija,-11.02671,-68.76918,Pando,,"Beni and Cochabamba, Bolivian Altiplano, North of Brazil, Southern Low Amazon",https://www.erepublik.com/en/main/region/Pando
+682,Peru,729,Cusco,-13.525,-71.9722222,Great Andes,,"Low Andes, Southern Low Amazon, Mid Andes",https://www.erepublik.com/en/main/region/Great-Andes
+683,Peru,730,Ica,-14.06394,-75.743988,Mid Andes,,"Low Andes, Southern Low Amazon, Great Andes, Lima, Auckland",https://www.erepublik.com/en/main/region/Mid-Andes
+684,Peru,731,Arequipa,-16.398822,-71.536883,Low Andes,,"Bolivian Altiplano, Norte Grande, Southern Low Amazon, Great Andes, Mid Andes",https://www.erepublik.com/en/main/region/Low-Andes
+685,Peru,732,Trujillo,-8.112,-79.0288,Chimor,"Iron, Saltpeter, Aluminum, Rubber","Lima, Northern Low Amazon, Queensland",https://www.erepublik.com/en/main/region/Chimor
+686,Peru,733,Iquitos,-3.733333,-73.25,Northern Low Amazon,"Oil, Neodymium, Cobalt, Wolfram","Southern Low Amazon, Lima, Chimor, North of Brazil, Amazonica",https://www.erepublik.com/en/main/region/Northern-Low-Amazon
+687,Peru,734,Pucallpa,-8.3833333,-74.55,Southern Low Amazon,,"Bolivian Altiplano, Pando, Low Andes, North of Brazil, Great Andes, Mid Andes, Lima, Northern Low Amazon",https://www.erepublik.com/en/main/region/Southern-Low-Amazon
+688,Peru,735,Lima DC,-12.04318,-77.02824,Lima,"Magnesium, Titanium","Southern Low Amazon, Mid Andes, Northern Low Amazon, Chimor",https://www.erepublik.com/en/main/region/Lima
+689,Colombia,736,Leticia,-4.21528,-69.94056,Amazonica,Fish,"Northern Low Amazon, North of Brazil, Andina, Orinoquia, Guayana",https://www.erepublik.com/en/main/region/Amazonica
+690,Colombia,737,Medellin,6.235925,-75.575137,Andina,Fish,"Amazonica, Orinoquia, Pacifica, Caribe e Insular, Venezuelan Andean, Zulian, Cundiboyacense",https://www.erepublik.com/en/main/region/Andina
+691,Colombia,738,Cartagena,10.3873369,-75.5196631,Caribe e Insular,Fish,"Andina, Zulian, Southeast of Mexico, Pacifica",https://www.erepublik.com/en/main/region/Caribe-e-Insular
+692,Colombia,739,Villavicencio,4.15,-73.633333,Orinoquia,Fish,"Amazonica, Andina, Guayana, Llanos, Venezuelan Andean, Cundiboyacense",https://www.erepublik.com/en/main/region/Orinoquia
+693,Colombia,740,Cali,3.420556,-76.522222,Pacifica,,"Andina, Caribe e Insular, Visayas",https://www.erepublik.com/en/main/region/Pacifica
+694,Colombia,741,Bogota,4.5980556,-74.0758333,Cundiboyacense,"Grain, Fruits, Cattle, Deer","Andina, Orinoquia",https://www.erepublik.com/en/main/region/Cundiboyacense
+695,North Macedonia,742,Skopje,41.9973462,21.4279956,Povardarie,"Fish, Oil, Sand, Magnesium","Eastern Macedonia, Macedonia, Western Macedonia, Kosovo",https://www.erepublik.com/en/main/region/Povardarie
+696,North Macedonia,743,Tetovo,42,20.966667,Western Macedonia,"Grain, Saltpeter, Titanium, Wolfram","Povardarie, Macedonia, Kosovo, Tirana, Southeastern Albania",https://www.erepublik.com/en/main/region/Western-Macedonia
+697,North Macedonia,744,Stip,41.745651,22.19697,Eastern Macedonia,"Fruits, Cattle","Povardarie, Southern Serbia, Sofia, Macedonia",https://www.erepublik.com/en/main/region/Eastern-Macedonia
+698,Montenegro,745,Pljevlja,43.36,19.36,North Montenegrin Mountains,"Fish, Sand, Wood, Magnesium","East Srpska Republic, Western Serbia, Raska, Central Montenegro, Kosovo, Tirana",https://www.erepublik.com/en/main/region/North-Montenegrin-Mountains
+699,Montenegro,746,Podgorica,42.442575,19.268646,Central Montenegro,"Aluminum, Titanium, Wolfram","North Montenegrin Mountains, East Srpska Republic, Montenegrin Coast, Albanian Coast, Tirana",https://www.erepublik.com/en/main/region/Central-Montenegro
+700,Montenegro,747,Bar,42.080952,19.1098709,Montenegrin Coast,Magnesium,"Central Montenegro, East Srpska Republic, South Dalmatia, Apulia, Albanian Coast",https://www.erepublik.com/en/main/region/Montenegrin-Coast
+701,Republic of China (Taiwan),748,Taipei,25.091075,121.5598345,Northern Taiwan,"Grain, Fruits, Cattle, Deer","Fujian, Jeollanam-do, Eastern Taiwan, Central Taiwan",https://www.erepublik.com/en/main/region/Northern-Taiwan
+702,Republic of China (Taiwan),749,Taichung,24.2332076,120.9417368,Central Taiwan,"Fish, Iron","Northern Taiwan, Fujian, Eastern Taiwan, Southern Taiwan",https://www.erepublik.com/en/main/region/Central-Taiwan
+703,Republic of China (Taiwan),763,Taitung,22.9846118,120.9876321,Eastern Taiwan,,"Northern Taiwan, Central Taiwan, Kyushu, Hawaii, Southern Taiwan",https://www.erepublik.com/en/main/region/Eastern-Taiwan
+704,Republic of China (Taiwan),750,Kaohsiung,23.0108714,120.6660044,Southern Taiwan,"Aluminum, Rubber","Central Taiwan, Eastern Taiwan, Guangdong, Hainan, Luzon",https://www.erepublik.com/en/main/region/Southern-Taiwan
+705,Cyprus,751,Nicosia,35.1666667,33.3666667,Southern Cyprus,"Grain, Fruits, Cattle, Deer","Northern Cyprus, Aegean Islands, Nazareth North District, Sinai, Lower Egypt",https://www.erepublik.com/en/main/region/Southern-Cyprus
+706,Cyprus,752,Famagusta,35.2857023,33.8411288,Northern Cyprus,"Fish, Magnesium","Southern Cyprus, Mediterranean Coast of Turkey",https://www.erepublik.com/en/main/region/Northern-Cyprus
+707,Belarus,753,Brest,52.1333333,23.6666667,Brestskaya,,"Hrodzienskaya, Minskaya, Homelskaya, Volhynia, Little Poland, Mazovia",https://www.erepublik.com/en/main/region/Brestskaya
+708,Belarus,754,Gomel,52.4452778,30.9841667,Homelskaya,Magnesium,"Brestskaya, Minskaya, Mahilyowskaya, Moscow and Central Russia, Siveria, Polisia, Volhynia",https://www.erepublik.com/en/main/region/Homelskaya
+709,Belarus,755,Hrodna,53.6666667,23.8333333,Hrodzienskaya,"Magnesium, Titanium, Wolfram","Brestskaya, Dainava, Vitsebskaya, Minskaya, Mazovia",https://www.erepublik.com/en/main/region/Hrodzienskaya
+710,Belarus,756,Minsk,53.9,27.5666667,Minskaya,,"Brestskaya, Homelskaya, Hrodzienskaya, Vitsebskaya, Mahilyowskaya",https://www.erepublik.com/en/main/region/Minskaya
+711,Belarus,757,Mahilyow,53.9,30.3333333,Mahilyowskaya,"Grain, Fish, Fruits","Homelskaya, Minskaya, Vitsebskaya, Moscow and Central Russia",https://www.erepublik.com/en/main/region/Mahilyowskaya
+712,Belarus,758,Vitsebsk,55.1833333,30.1666667,Vitsebskaya,"Magnesium, Titanium, Wolfram","Hrodzienskaya, Minskaya, Mahilyowskaya, Latgale, Moscow and Central Russia, Dainava, Lithuanian Highland",https://www.erepublik.com/en/main/region/Vitsebskaya
+713,New Zealand,759,Auckland,-36.8484597,174.7633315,Auckland,,"New South Wales, Zona Central, Wellington, Mid Andes",https://www.erepublik.com/en/main/region/Auckland
+714,New Zealand,760,Wellington,-41.2864603,174.776236,Wellington,,"Auckland, Zona Sur, Canterbury",https://www.erepublik.com/en/main/region/Wellington
+715,New Zealand,761,Canterbury,-43.7542275,171.1637245,Canterbury,"Grain, Cobalt","Wellington, Otago, Zona Sur, Tasmania, Victoria",https://www.erepublik.com/en/main/region/Canterbury
+716,New Zealand,762,Otago,-44.8280041,169.6345253,Otago,"Deer, Saltpeter, Rubber, Limestone","Canterbury, Zona Austral, Tasmania",https://www.erepublik.com/en/main/region/Otago
+717,Saudi Arabia,764,Riyadh,24.7116667,46.7241667,Al Riyadh,,"Najran, Asir, Makkah, Al Madinah, Al Qasim, Ha'il, Northern Borders, Eastern Province",https://www.erepublik.com/en/main/region/Al-Riyadh
+718,Saudi Arabia,765,Al Bahah,20.012991,41.4604489,Al Bahah,,"Asir, Makkah",https://www.erepublik.com/en/main/region/Al-Bahah
+719,Saudi Arabia,779,Arar,30.980829,41.025009,Northern Borders,,"Al Riyadh, Ha'il, Eastern Province, Al Jawf",https://www.erepublik.com/en/main/region/Northern-Borders
+720,Saudi Arabia,780,Sakaka,29.970869,40.2050089,Al Jawf,"Grain, Limestone","Sinai, Northern Borders, Tabuk, Ha'il, Beersheba South District",https://www.erepublik.com/en/main/region/Al-Jawf
+721,Saudi Arabia,781,Medina,24.460899,39.62019,Al Madinah,,"Red Sea Coast, Al Riyadh, Makkah, Al Qasim, Ha'il, Tabuk",https://www.erepublik.com/en/main/region/Al-Madinah
+722,Saudi Arabia,782,Buraidah,26.3333333,43.9666667,Al Qasim,,"Al Riyadh, Al Madinah, Ha'il",https://www.erepublik.com/en/main/region/Al-Qasim
+723,Saudi Arabia,783,Ha'il,27.5166667,41.6833333,Ha'il,,"Al Riyadh, Northern Borders, Al Jawf, Al Madinah, Al Qasim, Tabuk",https://www.erepublik.com/en/main/region/Ha-il
+724,Saudi Arabia,784,Abha,18.220221,42.5081599,Asir,,"Al Riyadh, Al Bahah, Jizan, Najran, Makkah",https://www.erepublik.com/en/main/region/Asir
+725,Saudi Arabia,785,Dammam,26.3926665,49.9777136,Eastern Province,,"Abu Dhabi, Al Riyadh, Northern Borders, Hormozgan, Najran",https://www.erepublik.com/en/main/region/Eastern-Province
+726,Saudi Arabia,786,Tabuk,28.390409,36.5732,Tabuk,,"Sinai, Red Sea Coast, Al Jawf, Al Madinah, Ha'il",https://www.erepublik.com/en/main/region/Tabuk
+727,Saudi Arabia,787,Najran,17.49173,44.13229,Najran,,"Al Riyadh, Asir, Eastern Province",https://www.erepublik.com/en/main/region/Najran
+728,Saudi Arabia,788,Mecca,21.4166667,39.8166667,Makkah,,"Al Riyadh, Al Bahah, Al Madinah, Asir, Jizan",https://www.erepublik.com/en/main/region/Makkah
+729,Saudi Arabia,789,Jizan,16.89192,42.549751,Jizan,Cobalt,"Asir, Makkah",https://www.erepublik.com/en/main/region/Jizan
+730,Egypt,778,Dahab,28.5091355,34.5136344,Sinai,,"Red Sea Coast, Lower Egypt, Southern Cyprus, Beersheba South District, Tabuk, Al Jawf",https://www.erepublik.com/en/main/region/Sinai
+731,Egypt,777,Cairo,30.0444196,31.2357116,Lower Egypt,"Wood, Magnesium","Sinai, Western Desert, Middle Egypt, Red Sea Coast, Southern Cyprus, Mediterranean Coast of Turkey, Aegean Islands, Crete",https://www.erepublik.com/en/main/region/Lower-Egypt
+732,Egypt,776,Siwa,29.2031708,25.5195451,Western Desert,"Neodymium, Magnesium, Titanium","Lower Egypt, Upper Egypt, Middle Egypt",https://www.erepublik.com/en/main/region/Western-Desert
+733,Egypt,775,Amarna,27.65,30.966667,Middle Egypt,Wood,"Lower Egypt, Western Desert, Upper Egypt, Red Sea Coast",https://www.erepublik.com/en/main/region/Middle-Egypt
+734,Egypt,774,Luxor,25.6872431,32.6396357,Upper Egypt,"Fish, Fruits, Deer","Western Desert, Middle Egypt, Red Sea Coast",https://www.erepublik.com/en/main/region/Upper-Egypt
+735,Egypt,773,Hurghada,27.2578957,33.8116067,Red Sea Coast,Rubber,"Sinai, Lower Egypt, Middle Egypt, Upper Egypt, Al Madinah, Tabuk",https://www.erepublik.com/en/main/region/Red-Sea-Coast
+736,United Arab Emirates,772,Abu Dhabi,24.4666667,54.3666667,Abu Dhabi,"Sand, Clay, Wood, Limestone","Eastern Province, Dubai, Sharjah",https://www.erepublik.com/en/main/region/Abu-Dhabi
+737,United Arab Emirates,771,Dubai,25.271139,55.307485,Dubai,"Granite, Magnesium, Titanium, Wolfram","Abu Dhabi, Sharjah",https://www.erepublik.com/en/main/region/Dubai
+738,United Arab Emirates,770,Sharjah,25.3575224,55.3918648,Sharjah,,"Abu Dhabi, Dubai, Ajman, Ras al-Khaimah, Umm al Quwain",https://www.erepublik.com/en/main/region/Sharjah
+739,United Arab Emirates,769,Ajman,25.403023,55.491797,Ajman,"Iron, Cobalt",Sharjah,https://www.erepublik.com/en/main/region/Ajman
+740,United Arab Emirates,768,Ras al-Khaimah,25.8006926,55.9761994,Ras al-Khaimah,,"Sharjah, Umm al Quwain, Fujairah, Hormozgan",https://www.erepublik.com/en/main/region/Ras-al-Khaimah
+741,United Arab Emirates,767,Falaj Al Moalla,25.3576093,55.863496,Umm al Quwain,,"Ras al-Khaimah, Sharjah, Hormozgan",https://www.erepublik.com/en/main/region/Umm-al-Quwain
+742,United Arab Emirates,766,Fujairah,25.1173883,56.3525677,Fujairah,,"Ras al-Khaimah, Hormozgan",https://www.erepublik.com/en/main/region/Fujairah
+743,Serbia,790,Pristina,42.67272,21.16688,Kosovo,,"Raska, North Montenegrin Mountains, Tirana, Western Macedonia, Povardarie, Southern Serbia",https://www.erepublik.com/en/main/region/Kosovo
+744,Albania,793,Tirana,41.326053,19.816007,Tirana,,"Kosovo, Albanian Coast, Southeastern Albania, Central Montenegro, North Montenegrin Mountains, Western Macedonia",https://www.erepublik.com/en/main/region/Tirana
+745,Albania,791,Durres,41.32306,19.44139,Albanian Coast,,"Apulia, Epirus, Central Montenegro, Montenegrin Coast, Southeastern Albania, Tirana, Ionian Islands",https://www.erepublik.com/en/main/region/Albanian-Coast
+746,Albania,792,Berat,40.70583,19.95222,Southeastern Albania,,"Albanian Coast, Tirana, Western Macedonia, Macedonia, Epirus",https://www.erepublik.com/en/main/region/Southeastern-Albania
+747,Georgia,798,Sokhumi,43.003333,41.015278,Abkhazia,"Sand, Magnesium","West Georgia, North Caucasus, Black Sea Coast of Turkey, Taurida",https://www.erepublik.com/en/main/region/Abkhazia
+748,Georgia,797,Kutaisi,42.25,42.7,West Georgia,"Fish, Fruits","Abkhazia, Inner Kartli, Lower Kartli, North Caucasus, Black Sea Coast of Turkey, Eastern Anatolia",https://www.erepublik.com/en/main/region/West-Georgia
+749,Georgia,796,Akhaltsikhe,41.638889,42.986111,Lower Kartli,,"West Georgia, Inner Kartli, Kakheti, Eastern Anatolia, Northern Armenia",https://www.erepublik.com/en/main/region/Lower-Kartli
+750,Georgia,795,Tbilisi,41.716667,44.783333,Inner Kartli,,"West Georgia, Lower Kartli, Kakheti, North Caucasus",https://www.erepublik.com/en/main/region/Inner-Kartli
+751,Georgia,794,Telavi,41.916667,45.483333,Kakheti,,"Inner Kartli, Lower Kartli, North Caucasus",https://www.erepublik.com/en/main/region/Kakheti
+752,Armenia,799,Gyumri,40.789444,43.8475,Northern Armenia,,"Eastern Anatolia, Lower Kartli, Central Armenia, Gegharkunik",https://www.erepublik.com/en/main/region/Northern-Armenia
+753,Armenia,800,Yerevan,40.183333,44.516667,Central Armenia,"Fruits, Magnesium","Northern Armenia, Eastern Anatolia, Syunik, Gegharkunik",https://www.erepublik.com/en/main/region/Central-Armenia
+754,Armenia,801,Kapan,39.201111,46.415,Syunik,"Fish, Iron, Titanium, Wolfram","Central Armenia, Northwestern Iran, Gegharkunik",https://www.erepublik.com/en/main/region/Syunik
+755,Armenia,802,Gavar,40.358889,45.126667,Gegharkunik,Wood,"Northern Armenia, Central Armenia, Syunik",https://www.erepublik.com/en/main/region/Gegharkunik
+756,Nigeria,803,Kano,12,8.516667,North West States,,"North East States, North Central States",https://www.erepublik.com/en/main/region/North-West-States
+757,Nigeria,808,Maiduguri,11.833333,13.15,North East States,,"North West States, North Central States, South South States",https://www.erepublik.com/en/main/region/North-East-States
+758,Nigeria,804,Abuja,9.066667,7.483333,North Central States,Iron,"North West States, North East States, South West States, South East States, South South States",https://www.erepublik.com/en/main/region/North-Central-States
+759,Nigeria,805,Lagos,6.453056,3.395833,South West States,"Sand, Clay, Wood","North Central States, South South States, Northeast of Brazil, Charrua",https://www.erepublik.com/en/main/region/South-West-States
+760,Nigeria,806,Port Harcourt,4.75,7,South South States,"Fish, Fruits, Cattle","North Central States, South West States, South East States, Northern Cape, Pampas, North East States",https://www.erepublik.com/en/main/region/South-South-States
+761,Nigeria,807,Awka,6.206944,7.067778,South East States,,"North Central States, South South States",https://www.erepublik.com/en/main/region/South-East-States
+762,Cuba,809,Havana,23.133333,-82.383333,Western Cuba,"Grain, Deer, Saltpeter","Las Villas, Florida, Southeast of Mexico",https://www.erepublik.com/en/main/region/Western-Cuba
+763,Cuba,810,Santa Clara,22.406919,-79.964939,Las Villas,"Iron, Sand, Wood, Limestone","Western Cuba, Oriente, Southeast of Mexico, Florida",https://www.erepublik.com/en/main/region/Las-Villas
+764,Cuba,811,Santiago de Cuba,20.019833,-75.813917,Oriente,"Oil, Clay","Las Villas, Azores, Central Western Venezuela, Canary Islands",https://www.erepublik.com/en/main/region/Oriente

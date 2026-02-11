@@ -1,0 +1,35 @@
+name: Strategy Map Deploy
+
+on:
+  workflow_dispatch: # 사령관님의 수동 딸깍 버튼!
+
+permissions:
+  contents: write # 깃허브가 스스로 지도를 업로드할 권한
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install Equipment
+        run: pip install -r requirements.txt
+        
+      - name: Run Strategy
+        run: python finalver.py # 사령관님의 파일명!
+        
+    # === 여기서부터 바뀐 부분입니다! ===
+      - name: Commit & Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit --amend --no-edit --allow-empty 
+          git push --force origin main
+
+
