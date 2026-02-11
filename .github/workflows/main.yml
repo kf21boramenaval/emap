@@ -1,6 +1,8 @@
 name: Strategy Map Deploy
 
 on:
+  schedule:
+    - cron: '0 * * * *' 
   workflow_dispatch: # 사령관님의 수동 딸깍 버튼!
 
 permissions:
@@ -31,6 +33,7 @@ jobs:
           git add .
           git commit -m "Update map data" || echo "No changes to commit"
           git push
+
 
 
 
