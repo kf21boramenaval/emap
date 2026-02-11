@@ -131,11 +131,11 @@ async def fetch_city_data(session, index, city_id, region_id):
 async def main_scout_operation(target_df):
     # 권장 사항: 지금처럼 잘 돌아간다면 그냥 쓰셔도 무방하지만, 
     # 만약 어느 날 갑자기 ❌ 실패 (코드: 403)나 429(Too Many Requests)가 뜨기 시작하면 
-    # 그때 아래의 limit=10 장치를 장착하시면 됩니다.
+    # 그때 아래의 limit=10 장치를 장착하시면 됩니다. 바로 아래 clinetsession 내부에 connector=connector 처리
     # # 한 번에 딱 10명만 동시 접속하도록 제한! (이게 진짜 안전장치) 
     connector = aiohttp.TCPConnector(limit=10)
     
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(connector=connector) as session:
         tasks = []
         for index, row in target_df.iterrows():
             # 타겟 하나하나를 임무(task)로 등록
