@@ -29,7 +29,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit --amend --no-edit --allow-empty 
-          git push --force origin main
+          git commit -m "Update strategy map" || exit 0
+          git push
+
 
 
