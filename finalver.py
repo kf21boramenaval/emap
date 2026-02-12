@@ -135,7 +135,7 @@ async def main_scout_operation(target_df):
     # # 한 번에 딱 10명만 동시 접속하도록 제한! (이게 진짜 안전장치) 
     connector = aiohttp.TCPConnector(limit=10)
     
-    async with aiohttp.ClientSession(connector=connector) as session:
+    async with aiohttp.ClientSession() as session:
         tasks = []
         for index, row in target_df.iterrows():
             # 타겟 하나하나를 임무(task)로 등록
