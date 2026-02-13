@@ -1,10 +1,4 @@
-import folium
-import json
 import pandas as pd
-import re
-from branca.element import Element
-from datetime import datetime, timezone, timedelta
-
 import requests
 import time
 import asyncio
@@ -66,6 +60,21 @@ for battle_id, battle_info in battles.items():
     inv_points = battle_info.get('inv', {}).get('points', 0)
     def_points = battle_info.get('def', {}).get('points', 0)
 
+    # --- [동맹국 수색 작전] ---
+    # 공격자 동맹 ID 리스트 가져오기
+    inv_ally_ids = battle_info.get('inv', {}).get('allies', [])
+    # 방어자 동맹 ID 리스트 가져오기
+    def_ally_ids = battle_info.get('def', {}).get('allies', [])
+
+    # ID 숫자를 이름으로 변환 (country_map 활용)
+    # 리스트 컴프리헨션으로 딸깍!
+    inv_ally_names = [country_map.get(str(aid), f"Unknown({aid})") for aid in inv_ally_ids]
+    def_ally_names = [country_map.get(str(aid), f"Unknown({aid})") for aid in def_ally_ids]
+
+    # 팝업에 뿌리기 좋게 "한국, 미국, 일본" 형태의 문자열로 변환
+    inv_allies_str = ", ".join(inv_ally_names) if inv_ally_names else "No Allies"
+    def_allies_str = ", ".join(def_ally_names) if def_ally_names else "No Allies"
+
     # 🌟 전투 타입 추가!
     war_type = battle_info.get('war_type', 'unknown')  # 전투 종류
     
@@ -74,15 +83,54 @@ for battle_id, battle_info in battles.items():
     
     battle_url = f"https://www.erepublik.com/en/military/battlefield/{battle_id}"
     
-    all_region_report.append({
+    # --- [디비전 수색 작전 개시] ---
+    div_data = battle_info.get('div', {})
+    
+    # 5개 디비전 초기값 설정 (전투 데이터가 없을 경우를 대비)
+    # 1, 2, 3, 4 디비전 + 11번(공군)
+    divisions = [1, 2, 3, 4, 11]
+    battle_status = {}
+
+    for d_idx in divisions:
+        # JSON에서 해당 디비전 정보 수색 (키값이 랜덤이니 .values()로 찾거나 순회)
+        # 하지만 사령관님 말씀대로 순서대로라면 이런 식으로 타격 가능합니다.
+        target_div = next((v for v in div_data.values() if v['div'] == d_idx), None)
+        
+        col_name = f'div_{d_idx}' if d_idx != 11 else 'div_air'
+        epic_col = f'epic_{d_idx}' if d_idx != 11 else 'epic_air'
+        
+        if target_div:
+            # 피아식별: 현재 dom 점수가 누구 거냐?
+            current_for = str(target_div['wall']['for'])
+            current_dom = target_div['wall']['dom']
+            
+            # 무조건 '공격자(Invader)'의 점수로 환산해서 저장! (그래야 나중에 막대 그리기 편함)
+            if current_for == inv_id:
+                inv_share = current_dom
+            else:
+                inv_share = 100 - current_dom
+                
+            battle_status[col_name] = inv_share
+            battle_status[epic_col] = target_div.get('epic', 0)
+        else:
+            battle_status[col_name] = 50.0  # 데이터 없으면 팽팽한 걸로!
+            battle_status[epic_col] = 0
+
+    # 기존 리포트에 데이터 병합
+    report_entry = {
         'region id': region_id,
         'current country': defender,
         'invader': invader,
+        'invader allies': inv_allies_str,
+        'defender allies': def_allies_str,  
         'battle url': battle_url,
         'invader points': inv_points,
         'defender points': def_points,
-        'war_type': war_type  # 🌟 추가!  
-    })
+        'war_type': war_type
+    }
+    report_entry.update(battle_status) # 10개 필드(점수5 + 에픽5) 합체!
+    all_region_report.append(report_entry)
+
 
 # 5. 데이터프레임 생성
 df_live = pd.DataFrame(all_region_report)
@@ -131,7 +179,7 @@ async def fetch_city_data(session, index, city_id, region_id):
 async def main_scout_operation(target_df):
     # 권장 사항: 지금처럼 잘 돌아간다면 그냥 쓰셔도 무방하지만, 
     # 만약 어느 날 갑자기 ❌ 실패 (코드: 403)나 429(Too Many Requests)가 뜨기 시작하면 
-    # 그때 아래의 limit=10 장치를 장착하시면 됩니다. 바로 아래 clinetsession 내부에 connector=connector 처리
+    # 그때 아래의 limit=10 장치를 장착하시면 됩니다.
     # # 한 번에 딱 10명만 동시 접속하도록 제한! (이게 진짜 안전장치) 
     connector = aiohttp.TCPConnector(limit=10)
     
@@ -167,22 +215,16 @@ for res in results:
 df.to_csv('erepregiondata.csv', index=False, encoding='utf-8-sig')
 print(f"🎊 작전 종료! 574개 전 구역 점령 완료! 으하하하!")
 
-
-
-
-
-
-
-
-
-
-
-
-
+import folium
+import json
+import pandas as pd
+import re
+from branca.element import Element
+from datetime import datetime, timezone, timedelta
 
 # UTC 기준으로 2시간을 더합니다! (UTC+2)
 # 만약 UTC-5를 원하시면 hours=-5 로 바꾸면 끝! 으흐흐
-target_time = datetime.now(timezone.utc) + timedelta(hours=9)
+target_time = datetime.now(timezone.utc) + timedelta(hours=+9)
 update_time = target_time.strftime('%Y-%m-%d %H:%M') + " (UTC+9)"
 
 # 1. 데이터 로드
@@ -191,8 +233,7 @@ df = pd.read_csv('erepregiondata.csv', encoding='utf-8-sig')
 # 사령관님의 컬러 보급품 맵핑 으흐흐
 # color_raw = """Romania#498f9eBrazil#6a9e8aItaly#8da9c4France#a3c4bcGermany#bfd7edHungary#d0e1f9China#4d648dSpain#5d5b6aCanada#75808aUSA#59b0c3Mexico#407088Argentina#132743Venezuela#edc9afUnited Kingdom#8ab6d6Switzerland#d4e2d4Netherlands#f0ead6Belgium#dfcdc3Austria#91a3b0Czech Republic#b4c5e4Poland#fbfff1Slovakia#95adbeNorway#66828eSweden#445c67Finland#498f9eUkraine#7897abRussia#3a506bBulgaria#5bc0beTurkey#1c2541Greece#394a51Japan#7fa99bSouth Korea#f6f4e6India#fddb3aIndonesia#52575dAustralia#8d93abSouth Africa#d6e0f0Republic of Moldova#89a4c7Portugal#b2c9abIreland#92a8d1Denmark#f7cac9Iran#dec2cbPakistan#c5d5cbIsrael#9fa8a3Thailand#e3e2b4Slovenia#a2b9bcCroatia#b2ad7fChile#878f99Serbia#6b5b95Malaysia#feb236Philippines#d64161Singapore#ff7b25Bosnia and Herzegovina#d5e1dfEstonia#e3eaa7Latvia#b5e7a0Lithuania#86af49North Korea#404040Uruguay#005b96Paraguay#b3cde0Bolivia#6497b1Peru#008080Colombia#76b5c5North Macedonia#e2e2e2Montenegro#afabacRepublic of China (Taiwan)#96ceb4Cyprus#ffeeadBelarus#ff6f61New Zealand#6b5b95Saudi Arabia#88b04bEgypt#92a8d1United Arab Emirates#955251Albania#b565a7Georgia#009b77Armenia#dd4124Nigeria#45b8acCuba#efc050"""
 # color_raw = """Romania#eddf9eBrazil#9cccb3Italy#d48a57France#cc73c8Germany#729c5bHungary#66bca7China#938c66Spain#69567bCanada#c693c6USA#9183ccMexico#9febc4Argentina#6b838eVenezuela#cc9bcbUnited Kingdom#726b8fSwitzerland#7e695aNetherlands#cc9b9aBelgium#9fae6eAustria#ae7f7fCzech Republic#796eaePoland#b86261Slovakia#4848f7Norway#c5eb51Sweden#ebbc51Finland#868f6aUkraine#5e7f8fRussia#ec9f9eBulgaria#8f6b8eTurkey#eb52b7Greece#539bebJapan#ae6e6eSouth Korea#accc9aIndia#ebbdebIndonesia#809eaeAustralia#90ae80South Africa#ae80acRepublic of Moldova#aea36dPortugal#d7e8a2Ireland#cdc183Denmark#8f6a6aIran#95673dPakistan#ece4bdIsrael#ae6dacThailand#54896eSlovenia#6a5284Croatia#a49bccChile#e2ecbdSerbia#eb5252Malaysia#b8eb9dPhilippines#763276Singapore#c453c9Bosnia and Herzegovina#6faf8dEstonia#bfdce4Latvia#ccb09bLithuania#c1cc9bNorth Korea#708f5eUruguay#ab9febParaguay#665e8fBolivia#5e8f75Peru#afa680Colombia#83b4cbNorth Macedonia#869d62Montenegro#cba945Republic of China (Taiwan)#c4b3deCyprus#7d53ceBelarus#cb6489New Zealand#d3d152Saudi Arabia#729672Egypt#a05560United Arab Emirates#c175a7Albania#bc6c6cGeorgia#76529eArmenia#779cbeNigeria#558a51Cuba#d44938"""
-color_raw = """Romania#FFE97FBrazil#7ACCA2Italy#d75e08France#CB37C7Germany#367c11Hungary#20b08eChina#6c6023Spain#270746Canada#c06dc1USA#6752CCMexico#7FFFBEArgentina#295166Venezuela#CB7ACCUnited Kingdom#342966Switzerland#49270fNetherlands#CC7A7ABelgium#7E992EAustria#994C4CCzech Republic#402E99Poland#a71919Slovakia#2e2effNorway#bfff00Sweden#ffb000Finland#576629Ukraine#144B66Russia#FF7F7FBulgaria#662965Turkey#ff00aaGreece#0079ffJapan#992E2ESouth Korea#96CC7AIndia#FEB3FFIndonesia#4C7F99Australia#66994CSouth Africa#994C98Republic of Moldova#99872EPortugal#defa87Ireland#CCB852Denmark#662929Iran#8a5321Pakistan#FFF2B3Israel#992E98Thailand#015b2eSlovenia#280055Croatia#877ACCChile#ECFFB3Serbia#ff0000Malaysia#AAFF7FPhilippines#651466Singapore#CC52CBBosnia and Herzegovina#2E9963Estonia#B3FFD8Latvia#CC9C7ALithuania#B8CC7ANorth Korea#306614Uruguay#957FFFParaguay#211466Bolivia#14663CPeru#998C4CColombia#52A3CCNorth Macedonia#577D2FMontenegro#C9A22CRepublic of China (Taiwan)#BEA2EBCyprus#4802CEBelarus#C91E5DNew Zealand#D6D400Saudi Arabia#347235Egypt#800517United Arab Emirates#B93B8FAlbania#B02B2CGeorgia#3B007FArmenia#3E7BB6Nigeria#055D00Cuba#D6301D"""
-
+color_raw = """Romania#FFE97FBrazil#7ACCA2Italy#d75e08France#CB37C7Germany#367c11Hungary#20b08eChina#6c6023Spain#270746Canada#c06dc1USA#6752CCMexico#7FFFBEArgentina#295166Venezuela#CB7ACCUnited Kingdom#342966Switzerland#49270fNetherlands#CC7A7ABelgium#7E992EAustria#994C4CCzech Republic#402E99Poland#a71919Slovakia#2e2effNorway#bfff00Sweden#ffb000Finland#576629Ukraine#144B66Russia#FF7F7FBulgaria#662965Turkey#ff00aaGreece#0079ffJapan#992E2ESouth Korea#96CC7AIndia#FEB3FFIndonesia#4C7F99Australia#66994CSouth Africa#994C98Republic of Moldova#99872EPortugal#defa87Ireland#CCB852Denmark#662929Iran#8a5321Pakistan#FFF2B3Israel#992E98Thailand#015b2eSlovenia#280055Croatia#877ACCChile#64FFB3Serbia#ff0000Malaysia#AAFF7FPhilippines#651466Singapore#CC52CBBosnia and Herzegovina#2E9963Estonia#B3FFD8Latvia#CC9C7ALithuania#B8CC7ANorth Korea#306614Uruguay#957FFFParaguay#211466Bolivia#14663CPeru#998C4CColombia#52A3CCNorth Macedonia#577D2FMontenegro#C9A22CRepublic of China (Taiwan)#BEA2EBCyprus#4802CEBelarus#C91E5DNew Zealand#D6D400Saudi Arabia#347235Egypt#800517United Arab Emirates#B93B8FAlbania#B02B2CGeorgia#3B007FArmenia#3E7BB6Nigeria#055D00Cuba#D6301D"""
 country_colors = dict(re.findall(r'([^#]+)(#[a-fA-F0-9]{6})', color_raw))
 
 country_codes = {
@@ -293,7 +334,6 @@ folium.TileLayer(
 ).add_to(m)
 
 
-
 # 3. 하단 정보 박스 (HTML/CSS) - REGION, OWNER, ORIGINAL 순서 으흐흐
 info_box_html = """
 <div id="info-box" style="
@@ -319,7 +359,7 @@ ranking_box_html = """
 <style>
     #ranking-toggle {
         position: absolute;
-        top: 80px;
+        top: 140px;
         right: 10px;
         background: rgba(255, 255, 255, 0.95);
         border: 2px solid #59b0c3;
@@ -834,9 +874,24 @@ for _, row in df.iterrows():
             # 🌟 새 방식 (간단!)
             war_type = str(row.get('war_type', 'unknown'))
             
+            # 🌟 [추가] 에픽 판정기: 모든 디비전 중 하나라도 1(True)이면 에픽!
+            # row.get(컬럼명, 기본값)을 써서 혹시나 데이터가 없어도 에러 안 나게 방어!
+            is_epic = any([
+                row.get('epic_1', 0) == 1, 
+                row.get('epic_2', 0) == 1, 
+                row.get('epic_3', 0) == 1, 
+                row.get('epic_4', 0) == 1, 
+                row.get('epic_air', 0) == 1
+            ])
+
+            # 2. 아이콘 및 컬러 결정 (에픽을 최우선으로!)
+            if is_epic:
+                icon_color = "#FFD700"  # 황금색
+                icon_emoji = "🌟"        # 번쩍이는 별! (또는 🔥)
+                battle_type = "EPIC BATTLE"
             
             # 🌟 아이콘 선택
-            if war_type == 'resistance':
+            elif war_type == 'resistance':
                 icon_color = "#2980b9"
                 icon_emoji = "🔥"
                 battle_type = "RESISTANCE WAR"
@@ -874,7 +929,9 @@ for _, row in df.iterrows():
             
             # 1. 저항전이면 빨간색 "RESISTANCE" 딱지를 준비합니다.
             res_label = ""
-            if war_type == 'resistance':
+            if is_epic:
+                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🌟 EPIC WAR</div>'
+            elif war_type == 'resistance':
                 res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🔥 RESISTANCE WAR</div>'             
             elif war_type == 'civil':  # 또는 다른 값
                 res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> 🚩 Civil War </div>'      
@@ -883,39 +940,76 @@ for _, row in df.iterrows():
             elif war_type == 'airstrike' :
                 res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> ✈️ Airstrike </div>'
 
-            # 팝업을 '전술 보고서' 느낌으로 재구성 으흐흐
+
+            # 1. 디비전별 막대 HTML을 미리 생성하는 함수 (코드가 길어지니 함수로 빼두면 편합니다!)
+            def create_div_bar(div_num, score, is_epic):
+                
+                epic_mark = "🔥" if is_epic == 1 else ""
+                label = f"D{div_num}" if div_num != 11 else "AIR"
+                atk_score = score
+                def_score = 100 - score
+                
+                return f"""
+                <div style="margin-bottom: 6px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: bold; margin-bottom: 2px; font-family: 'Arial';">
+                        <span style="color: #e74c3c;">{atk_score:.1f}%</span>
+                        <span>{epic_mark} {label}</span>
+                        <span style="color: #2980b9;">{def_score:.1f}%</span>
+                    </div>
+                    <div style="display: flex; width: 100%; height: 12px; border-radius: 6px; overflow: hidden; background: #eee;">
+                        <div style="width: {atk_score}%; background: #e74c3c;"></div>
+                        <div style="width: {def_score}%; background: #3498db;"></div>
+                    </div>
+                </div>
+                """
+
+            # 1. 국기 크기 정예화 (48x36 → 40x30으로 살짝 조정, 존재감은 유지!)
+            attacker_flag = f'<img src="https://flagcdn.com/40x30/{attacker_code}.png" style="border: 1px solid #ddd; border-radius: 3px; box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">'
+            defender_flag = f'<img src="https://flagcdn.com/40x30/{defender_code}.png" style="border: 1px solid #ddd; border-radius: 3px; box-shadow: 1px 1px 3px rgba(0,0,0,0.2);">'
+
+            # 2. 팝업 HTML (전체 너비 축소 및 폰트 다이어트)
+            # 팝업 HTML에서 동맹군 부분을 빼버린 핵심 구조
             popup_html = f"""
-            <div style="width: 220px; font-family: 'Arial'; border: 2px solid {icon_color}; padding: 10px; border-radius: 8px; background: #fff;">
-                <div style="text-align: center; font-weight: bold; font-size: 16px; margin-bottom: 5px; color: #333;">
-                    {row['region']} FRONT
+            <div style="width: 200px; font-family: 'Arial'; padding: 8px; background: #fff; border-radius: 10px; border: 2.5px solid {icon_color}; box-sizing: border-box;">
+                <div style="text-align: center; font-weight: bold; font-size: 14px; margin-bottom: 2px;">{row['region']}</div>
+                <div style="text-align: center; margin-bottom: 8px;">{res_label}</div>
+
+                <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 8px; margin-bottom: 6px;">
+                    <div style="width: 80px; text-align: left;">
+                        <div style="height: 32px;">{attacker_flag}</div>
+                        <div style="font-size: 10px; font-weight: bold; color: #e74c3c; margin-top: 2px;">{attacker[:10]}</div>
+                        <div style="font-size: 18px; font-weight: 900; color: #e74c3c;">{attacker_point}</div>
+                    </div>
+                    <div style="align-self: center; font-weight: bold; color: #ddd; font-size: 11px;">VS</div>
+                    <div style="width: 80px; text-align: right;">
+                        <div style="height: 32px;">{defender_flag}</div>
+                        <div style="font-size: 10px; font-weight: bold; color: #2980b9; margin-top: 2px;">{defender[:10]}</div>
+                        <div style="font-size: 18px; font-weight: 900; color: #2980b9;">{defender_point}</div>
+                    </div>
                 </div>
 
-                <div style="text-align: center; margin-bottom: 5px;">
-                    {res_label}  </div>    
-
-                <div style="font-size: 17px; line-height: 1.6; border-top: 1px solid #ddd; padding-top: 5px;">
-                    <span style="color: #e74c3c; font-weight: bold;">[ATTACKER]</span><br> 
-                    {attacker_flag} {attacker} {attacker_point} <br>
-                    <span style="color: #2980b9; font-weight: bold;">[DEFENDER]</span><br> 
-                    {defender_flag} {defender} {defender_point}
+                <div style="background: #f8f9fa; padding: 6px; border-radius: 6px; margin-bottom: 8px; border: 1px solid #eee;">
+                    {"".join([create_div_bar(i, row[f'div_{i}'], row[f'epic_{i}']) for i in [1,2,3,4]])}
+                    {create_div_bar(11, row['div_air'], row['epic_air'])}
                 </div>
-                <div style="margin-top: 10px; text-align: center;">
+
+                <div style="text-align: center;">
                     <a href="{b_url}" target="_blank" 
-                    style="display: block; padding: 10px; background: #FF4500; color: #fff; 
-                            text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 13px;">
+                    style="display: block; width: 100%; padding: 8px 0; background: #FF4500; color: #fff; 
+                            text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 12px;">
                         ⚔️ JOIN THE BATTLE
                     </a>
                 </div>
             </div>
             """
-            
             icon_style = f"""<div style="font-size: 20px; text-shadow: 1px 1px 3px #000; cursor: pointer;">{icon_emoji}</div>"""
             
             folium.Marker(
                 location=[row['lat'], row['lon']],
                 icon=folium.DivIcon(html=icon_style),
-                popup=folium.Popup(popup_html, max_width=220),
+                popup=folium.Popup(popup_html, max_width=280),
                 z_index=1000
+                
             ).add_to(battle_layer)
 
 battle_layer.add_to(m)
@@ -1060,5 +1154,5 @@ resource_layer.add_to(m)
 #         ).add_to(m)
 
 folium.LayerControl(collapsed=False).add_to(m)
-m.save('index.html')
+m.save('strategic_map.html')
 print("으흐흐흐... 사령관님! 모든 전술적 요소가 통합된 최종 지도가 완성되었습니다!")
