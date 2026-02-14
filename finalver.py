@@ -1122,5 +1122,5 @@ resource_layer.add_to(m)
 #         ).add_to(m)
 
 folium.LayerControl(collapsed=False).add_to(m)
-m.save('strategic_map.html')
+m.save('index.html')
 print("으흐흐흐... 사령관님! 모든 전술적 요소가 통합된 최종 지도가 완성되었습니다!")
