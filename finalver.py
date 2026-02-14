@@ -66,6 +66,21 @@ for battle_id, battle_info in battles.items():
     inv_points = battle_info.get('inv', {}).get('points', 0)
     def_points = battle_info.get('def', {}).get('points', 0)
 
+    # --- [동맹국 수색 작전] ---
+    # 공격자 동맹 ID 리스트 가져오기
+    inv_ally_ids = battle_info.get('inv', {}).get('allies', [])
+    # 방어자 동맹 ID 리스트 가져오기
+    def_ally_ids = battle_info.get('def', {}).get('allies', [])
+
+    # ID 숫자를 이름으로 변환 (country_map 활용)
+    # 리스트 컴프리헨션으로 딸깍!
+    inv_ally_names = [country_map.get(str(aid), f"Unknown({aid})") for aid in inv_ally_ids]
+    def_ally_names = [country_map.get(str(aid), f"Unknown({aid})") for aid in def_ally_ids]
+
+    # 팝업에 뿌리기 좋게 "한국, 미국, 일본" 형태의 문자열로 변환
+    inv_allies_str = ", ".join(inv_ally_names) if inv_ally_names else "No Allies"
+    def_allies_str = ", ".join(def_ally_names) if def_ally_names else "No Allies"
+
     # 🌟 전투 타입 추가!
     war_type = battle_info.get('war_type', 'unknown')  # 전투 종류
     
@@ -74,15 +89,54 @@ for battle_id, battle_info in battles.items():
     
     battle_url = f"https://www.erepublik.com/en/military/battlefield/{battle_id}"
     
-    all_region_report.append({
+    # --- [디비전 수색 작전 개시] ---
+    div_data = battle_info.get('div', {})
+    
+    # 5개 디비전 초기값 설정 (전투 데이터가 없을 경우를 대비)
+    # 1, 2, 3, 4 디비전 + 11번(공군)
+    divisions = [1, 2, 3, 4, 11]
+    battle_status = {}
+
+    for d_idx in divisions:
+        # JSON에서 해당 디비전 정보 수색 (키값이 랜덤이니 .values()로 찾거나 순회)
+        # 하지만 사령관님 말씀대로 순서대로라면 이런 식으로 타격 가능합니다.
+        target_div = next((v for v in div_data.values() if v['div'] == d_idx), None)
+        
+        col_name = f'div_{d_idx}' if d_idx != 11 else 'div_air'
+        epic_col = f'epic_{d_idx}' if d_idx != 11 else 'epic_air'
+        
+        if target_div:
+            # 피아식별: 현재 dom 점수가 누구 거냐?
+            current_for = str(target_div['wall']['for'])
+            current_dom = target_div['wall']['dom']
+            
+            # 무조건 '공격자(Invader)'의 점수로 환산해서 저장! (그래야 나중에 막대 그리기 편함)
+            if current_for == inv_id:
+                inv_share = current_dom
+            else:
+                inv_share = 100 - current_dom
+                
+            battle_status[col_name] = inv_share
+            battle_status[epic_col] = target_div.get('epic', 0)
+        else:
+            battle_status[col_name] = 50.0  # 데이터 없으면 팽팽한 걸로!
+            battle_status[epic_col] = 0
+
+    # 기존 리포트에 데이터 병합
+    report_entry = {
         'region id': region_id,
         'current country': defender,
         'invader': invader,
+        'invader allies': inv_allies_str,
+        'defender allies': def_allies_str,  
         'battle url': battle_url,
         'invader points': inv_points,
         'defender points': def_points,
-        'war_type': war_type  # 🌟 추가!  
-    })
+        'war_type': war_type
+    }
+    report_entry.update(battle_status) # 10개 필드(점수5 + 에픽5) 합체!
+    all_region_report.append(report_entry)
+
 
 # 5. 데이터프레임 생성
 df_live = pd.DataFrame(all_region_report)
@@ -131,7 +185,7 @@ async def fetch_city_data(session, index, city_id, region_id):
 async def main_scout_operation(target_df):
     # 권장 사항: 지금처럼 잘 돌아간다면 그냥 쓰셔도 무방하지만, 
     # 만약 어느 날 갑자기 ❌ 실패 (코드: 403)나 429(Too Many Requests)가 뜨기 시작하면 
-    # 그때 아래의 limit=10 장치를 장착하시면 됩니다. 바로 아래 clinetsession 내부에 connector=connector 처리
+    # 그때 아래의 limit=10 장치를 장착하시면 됩니다.
     # # 한 번에 딱 10명만 동시 접속하도록 제한! (이게 진짜 안전장치) 
     connector = aiohttp.TCPConnector(limit=10)
     
