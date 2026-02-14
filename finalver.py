@@ -225,6 +225,8 @@ print(f"🎊 작전 종료! 574개 전 구역 점령 완료! 으하하하!")
 
 
 
+
+
 # UTC 기준으로 2시간을 더합니다! (UTC+2)
 # 만약 UTC-5를 원하시면 hours=-5 로 바꾸면 끝! 으흐흐
 target_time = datetime.now(timezone.utc) + timedelta(hours=+9)
@@ -234,10 +236,28 @@ update_time = target_time.strftime('%Y-%m-%d %H:%M') + " (UTC+9)"
 df = pd.read_csv('erepregiondata.csv', encoding='utf-8-sig')
 
 # 사령관님의 컬러 보급품 맵핑 으흐흐
-# color_raw = """Romania#498f9eBrazil#6a9e8aItaly#8da9c4France#a3c4bcGermany#bfd7edHungary#d0e1f9China#4d648dSpain#5d5b6aCanada#75808aUSA#59b0c3Mexico#407088Argentina#132743Venezuela#edc9afUnited Kingdom#8ab6d6Switzerland#d4e2d4Netherlands#f0ead6Belgium#dfcdc3Austria#91a3b0Czech Republic#b4c5e4Poland#fbfff1Slovakia#95adbeNorway#66828eSweden#445c67Finland#498f9eUkraine#7897abRussia#3a506bBulgaria#5bc0beTurkey#1c2541Greece#394a51Japan#7fa99bSouth Korea#f6f4e6India#fddb3aIndonesia#52575dAustralia#8d93abSouth Africa#d6e0f0Republic of Moldova#89a4c7Portugal#b2c9abIreland#92a8d1Denmark#f7cac9Iran#dec2cbPakistan#c5d5cbIsrael#9fa8a3Thailand#e3e2b4Slovenia#a2b9bcCroatia#b2ad7fChile#878f99Serbia#6b5b95Malaysia#feb236Philippines#d64161Singapore#ff7b25Bosnia and Herzegovina#d5e1dfEstonia#e3eaa7Latvia#b5e7a0Lithuania#86af49North Korea#404040Uruguay#005b96Paraguay#b3cde0Bolivia#6497b1Peru#008080Colombia#76b5c5North Macedonia#e2e2e2Montenegro#afabacRepublic of China (Taiwan)#96ceb4Cyprus#ffeeadBelarus#ff6f61New Zealand#6b5b95Saudi Arabia#88b04bEgypt#92a8d1United Arab Emirates#955251Albania#b565a7Georgia#009b77Armenia#dd4124Nigeria#45b8acCuba#efc050"""
-# color_raw = """Romania#eddf9eBrazil#9cccb3Italy#d48a57France#cc73c8Germany#729c5bHungary#66bca7China#938c66Spain#69567bCanada#c693c6USA#9183ccMexico#9febc4Argentina#6b838eVenezuela#cc9bcbUnited Kingdom#726b8fSwitzerland#7e695aNetherlands#cc9b9aBelgium#9fae6eAustria#ae7f7fCzech Republic#796eaePoland#b86261Slovakia#4848f7Norway#c5eb51Sweden#ebbc51Finland#868f6aUkraine#5e7f8fRussia#ec9f9eBulgaria#8f6b8eTurkey#eb52b7Greece#539bebJapan#ae6e6eSouth Korea#accc9aIndia#ebbdebIndonesia#809eaeAustralia#90ae80South Africa#ae80acRepublic of Moldova#aea36dPortugal#d7e8a2Ireland#cdc183Denmark#8f6a6aIran#95673dPakistan#ece4bdIsrael#ae6dacThailand#54896eSlovenia#6a5284Croatia#a49bccChile#e2ecbdSerbia#eb5252Malaysia#b8eb9dPhilippines#763276Singapore#c453c9Bosnia and Herzegovina#6faf8dEstonia#bfdce4Latvia#ccb09bLithuania#c1cc9bNorth Korea#708f5eUruguay#ab9febParaguay#665e8fBolivia#5e8f75Peru#afa680Colombia#83b4cbNorth Macedonia#869d62Montenegro#cba945Republic of China (Taiwan)#c4b3deCyprus#7d53ceBelarus#cb6489New Zealand#d3d152Saudi Arabia#729672Egypt#a05560United Arab Emirates#c175a7Albania#bc6c6cGeorgia#76529eArmenia#779cbeNigeria#558a51Cuba#d44938"""
-color_raw = """Romania#FFE97FBrazil#7ACCA2Italy#d75e08France#CB37C7Germany#367c11Hungary#20b08eChina#6c6023Spain#270746Canada#c06dc1USA#6752CCMexico#7FFFBEArgentina#295166Venezuela#CB7ACCUnited Kingdom#342966Switzerland#49270fNetherlands#CC7A7ABelgium#7E992EAustria#994C4CCzech Republic#402E99Poland#a71919Slovakia#2e2effNorway#bfff00Sweden#ffb000Finland#576629Ukraine#144B66Russia#FF7F7FBulgaria#662965Turkey#ff00aaGreece#0079ffJapan#992E2ESouth Korea#96CC7AIndia#FEB3FFIndonesia#4C7F99Australia#66994CSouth Africa#994C98Republic of Moldova#99872EPortugal#defa87Ireland#CCB852Denmark#662929Iran#8a5321Pakistan#FFF2B3Israel#992E98Thailand#015b2eSlovenia#280055Croatia#877ACCChile#64FFB3Serbia#ff0000Malaysia#AAFF7FPhilippines#651466Singapore#CC52CBBosnia and Herzegovina#2E9963Estonia#B3FFD8Latvia#CC9C7ALithuania#B8CC7ANorth Korea#306614Uruguay#957FFFParaguay#211466Bolivia#14663CPeru#998C4CColombia#52A3CCNorth Macedonia#577D2FMontenegro#C9A22CRepublic of China (Taiwan)#BEA2EBCyprus#4802CEBelarus#C91E5DNew Zealand#D6D400Saudi Arabia#347235Egypt#800517United Arab Emirates#B93B8FAlbania#B02B2CGeorgia#3B007FArmenia#3E7BB6Nigeria#055D00Cuba#D6301D"""
-country_colors = dict(re.findall(r'([^#]+)(#[a-fA-F0-9]{6})', color_raw))
+country_colors ={
+    "Romania": "#FFE97F", "Brazil": "#7ACCA2", "Italy": "#d75e08", "France": "#CB37C7",
+    "Germany": "#367c11", "Hungary": "#20b08e", "China": "#6c6023", "Spain": "#270746",
+    "Canada": "#c06dc1", "USA": "#6752CC", "Mexico": "#7FFFBE", "Argentina": "#295166",
+    "Venezuela": "#CB7ACC", "United Kingdom": "#342966", "Switzerland": "#49270f",
+    "Netherlands": "#CC7A7A", "Belgium": "#7E992E", "Austria": "#994C4C", "Czech Republic": "#402E99",
+    "Poland": "#a71919", "Slovakia": "#2e2eff", "Norway": "#bfff00", "Sweden": "#ffb000",
+    "Finland": "#576629", "Ukraine": "#144B66", "Russia": "#FF7F7F", "Bulgaria": "#662965",
+    "Turkey": "#ff00aa", "Greece": "#0079ff", "Japan": "#992E2E", "South Korea": "#96CC7A",
+    "India": "#FEB3FF", "Indonesia": "#4C7F99", "Australia": "#66994C", "South Africa": "#994C98",
+    "Republic of Moldova": "#99872E", "Portugal": "#defa87", "Ireland": "#CCB852",
+    "Denmark": "#662929", "Iran": "#8a5321", "Pakistan": "#FFF2B3", "Israel": "#992E98",
+    "Thailand": "#015b2e", "Slovenia": "#280055", "Croatia": "#877ACC", "Chile": "#ECFFB3",
+    "Serbia": "#ff0000", "Malaysia": "#AAFF7F", "Philippines": "#651466", "Singapore": "#CC52CB",
+    "Bosnia and Herzegovina": "#2E9963", "Estonia": "#B3FFD8", "Latvia": "#CC9C7A",
+    "Lithuania": "#B8CC7A", "North Korea": "#306614", "Uruguay": "#957FFF", "Paraguay": "#211466",
+    "Bolivia": "#14663C", "Peru": "#998C4C", "Colombia": "#52A3CC", "North Macedonia": "#577D2F",
+    "Montenegro": "#C9A22C", "Republic of China (Taiwan)": "#BEA2EB", "Cyprus": "#4802CE",
+    "Belarus": "#C91E5D", "New Zealand": "#D6D400", "Saudi Arabia": "#347235",
+    "Egypt": "#800517", "United Arab Emirates": "#B93B8F", "Albania": "#B02B2C",
+    "Georgia": "#3B007F", "Armenia": "#3E7BB6", "Nigeria": "#055D00", "Cuba": "#D6301D"
+}
 
 country_codes = {
     'Romania': 'ro', 'Brazil': 'br', 'Italy': 'it', 'France': 'fr',
