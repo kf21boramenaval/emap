@@ -1003,7 +1003,8 @@ for _, row in df.iterrows():
 
             # 1. 디비전별 막대 HTML을 미리 생성하는 함수 (코드가 길어지니 함수로 빼두면 편합니다!)
             def create_div_bar(div_num, score, is_epic, end_t):         
-                epic_mark = "🔥🔥" if is_epic == 2 else ("🔥" if is_epic == 1 else "")
+                # epic_mark = "🔥🔥" if is_epic == 2 else ("🔥" if is_epic == 1 else "")
+                epic_mark = "🔥" if is_epic == 2 else ""
             
             # 🚩 전술 수정: end_t가 비어있지 않고 'nan'이 아니면 무조건 체크!
                 end_val = str(end_t).lower()
