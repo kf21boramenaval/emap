@@ -965,18 +965,41 @@ for _, row in df.iterrows():
             attacker_flag = f'<img src="https://flagcdn.com/16x12/{attacker_code}.png" style="margin-right: 4px; vertical-align: middle;">'
             defender_flag = f'<img src="https://flagcdn.com/16x12/{defender_code}.png" style="margin-right: 4px; vertical-align: middle;">'
             
-            # 1. 저항전이면 빨간색 "RESISTANCE" 딱지를 준비합니다.
-            res_label = ""
+            # # 1. 저항전이면 빨간색 "RESISTANCE" 딱지를 준비합니다.
+            # res_label = ""
+            # if is_epic:
+            #     res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🌟 EPIC WAR</div>'
+            # elif war_type == 'resistance':
+            #     res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🔥 RESISTANCE WAR</div>'             
+            # elif war_type == 'civil':  # 또는 다른 값
+            #     res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> 🚩 Civil War </div>'      
+            # elif war_type == 'dictatorship':
+            #     res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> 👑 Dictatorship </div>'
+            # elif war_type == 'airstrike' :
+            #     res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> ✈️ Airstrike </div>'
+
+            labels = []
+
+            # 2. 에픽 판정 (최우선)
             if is_epic:
-                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🌟 EPIC WAR</div>'
-            elif war_type == 'resistance':
-                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;">🔥 RESISTANCE WAR</div>'             
-            elif war_type == 'civil':  # 또는 다른 값
-                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> 🚩 Civil War </div>'      
+                labels.append("🌟 EPIC")
+
+            # 3. 전쟁 유형 판정 (특수 상황만 추가)
+            if war_type == 'resistance':
+                labels.append("🔥 RESISTANCE")
+            elif war_type == 'civil':
+                labels.append("🚩 CIVIL")
             elif war_type == 'dictatorship':
-                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> 👑 Dictatorship </div>'
-            elif war_type == 'airstrike' :
-                res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> ✈️ Airstrike </div>'
+                labels.append("👑 DICTATORSHIP")
+            elif war_type == 'airstrike':
+                labels.append("✈️ AIRSTRIKE")
+
+            # 4. 최종 조립: 특수 상황(에픽 또는 특수전)일 때만 HTML 생성
+            res_label = ""
+            if labels:
+                combined_text = " ".join(labels) + " WAR"
+                res_label = f'<div style="color: #e67e22; font-weight: bold; font-size: 14px; margin-top: -5px;">{combined_text}</div>'
+
 
 
             # ... (루프 내부)
@@ -1006,7 +1029,7 @@ for _, row in df.iterrows():
             # 1. 디비전별 막대 HTML을 미리 생성하는 함수 (코드가 길어지니 함수로 빼두면 편합니다!)
             def create_div_bar(div_num, score, is_epic, end_t):         
                 # epic_mark = "🔥🔥" if is_epic == 2 else ("🔥" if is_epic == 1 else "")
-                epic_mark = "🔥" if is_epic == 2 else ""
+                epic_mark = "🌟" if is_epic == 2 else ""
             
             # 🚩 전술 수정: end_t가 비어있지 않고 'nan'이 아니면 무조건 체크!
                 end_val = str(end_t).lower()
