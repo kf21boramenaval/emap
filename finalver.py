@@ -243,8 +243,10 @@ print(f"🎊 작전 종료! 574개 전 구역 점령 완료! 으하하하!")
 target_time = datetime.now(timezone.utc) + timedelta(hours=+9)
 update_time = target_time.strftime('%Y-%m-%d %H:%M') + " (UTC+9)"
 
+
 # 1. 데이터 로드
 df = pd.read_csv('erepregiondata.csv', encoding='utf-8-sig')
+
 
 # 사령관님의 컬러 보급품 맵핑 으흐흐
 country_colors ={
@@ -1050,7 +1052,7 @@ for _, row in df.iterrows():
                     left: -5px;                 /* 🌟 만약 오른쪽으로 치우친다면 왼쪽으로 살짝 강제 이동 (조절 가능) */
                 ">
                 
-                <div style="text-align: center; font-weight: bold; font-size: 14px; margin-bottom: 2px;">{row['region']}</div>
+                <div style="text-align: center; font-weight: bold; font-size: 16px; margin-bottom: 2px;">{row['region']}</div>
                 <div style="text-align: center; font-size: 11px; color: #666; margin-bottom: 10px;">{res_label}</div>
 
                 <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; border-top: 1px solid #eee; padding-top: 10px; margin-bottom: 10px;">
@@ -1069,7 +1071,6 @@ for _, row in df.iterrows():
                     padding: 10px; 
                     border-radius: 6px; 
                     border: 1px solid #eee;
-                    margin-bottom: 8px;
                 /* 🚩 핵심: 좌우로 삐져나가게 만들기 */
                     width: 105%;           /* 부모보다 더 넓게! */
                     margin-left:    /* 중앙 정렬을 위해 왼쪽으로 살짝 당기기 */
@@ -1106,7 +1107,7 @@ for _, row in df.iterrows():
             folium.Marker(
                 location=[row['lat'], row['lon']],
                 icon=folium.DivIcon(html=icon_style),
-                popup=folium.Popup(popup_html, max_width=320),
+                popup=folium.Popup(popup_html, max_width=280),
                 z_index=1000
                 
             ).add_to(battle_layer)
