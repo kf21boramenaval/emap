@@ -88,10 +88,13 @@ for battle_id, battle_info in battles.items():
     defender = country_map.get(def_id, 'Unknown')
     
     battle_url = f"https://www.erepublik.com/en/military/battlefield/{battle_id}"
+
+    # 🌟 [추가 작전 1] 공통 전장 정보 확보
+    zone_id = battle_info.get('zone_id', 1)  # 현재 라운드
+    battle_start = battle_info.get('start', 0) # 시작 시간 (Unix Timestamp)
     
     # --- [디비전 수색 작전 개시] ---
     div_data = battle_info.get('div', {})
-    
     # 5개 디비전 초기값 설정 (전투 데이터가 없을 경우를 대비)
     # 1, 2, 3, 4 디비전 + 11번(공군)
     divisions = [1, 2, 3, 4, 11]
@@ -104,6 +107,8 @@ for battle_id, battle_info in battles.items():
         
         col_name = f'div_{d_idx}' if d_idx != 11 else 'div_air'
         epic_col = f'epic_{d_idx}' if d_idx != 11 else 'epic_air'
+        # 🌟 '종료 시간'을 저장할 컬럼 (핵심 데이터)
+        end_time_col = f'end_t_{d_idx}' if d_idx != 11 else 'end_t_air'
         
         if target_div:
             # 피아식별: 현재 dom 점수가 누구 거냐?
@@ -118,23 +123,30 @@ for battle_id, battle_info in battles.items():
                 
             battle_status[col_name] = inv_share
             battle_status[epic_col] = target_div.get('epic', 0)
+
+            # 🌟 [사령관님 지시사항] end 필드 값 그대로 추출
+            # null이면 None이 되고, 숫자면 숫자가 들어갑니다.
+            battle_status[end_time_col] = target_div.get('end')
+
         else:
             battle_status[col_name] = 50.0  # 데이터 없으면 팽팽한 걸로!
             battle_status[epic_col] = 0
 
-    # 기존 리포트에 데이터 병합
-    report_entry = {
-        'region id': region_id,
-        'current country': defender,
-        'invader': invader,
-        'invader allies': inv_allies_str,
-        'defender allies': def_allies_str,  
-        'battle url': battle_url,
-        'invader points': inv_points,
-        'defender points': def_points,
-        'war_type': war_type
-    }
-    report_entry.update(battle_status) # 10개 필드(점수5 + 에픽5) 합체!
+    # 🌟 [추가 작전 3] 리포트에 최종 합체
+        report_entry = {
+            'region id': region_id,
+            'zone_id': zone_id,          # 추가
+            'battle_start': battle_start, # 추가
+            'current country': defender,
+            'invader': invader,
+            'invader allies': inv_allies_str,
+            'defender allies': def_allies_str,  
+            'battle url': battle_url,
+            'invader points': inv_points,
+            'defender points': def_points,
+            'war_type': war_type
+        }
+    report_entry.update(battle_status) # 15개 필드(점수5 + 에픽5, 전장 시간) 합체!
     all_region_report.append(report_entry)
 
 
@@ -226,7 +238,6 @@ print(f"🎊 작전 종료! 574개 전 구역 점령 완료! 으하하하!")
 
 
 
-
 # UTC 기준으로 2시간을 더합니다! (UTC+2)
 # 만약 UTC-5를 원하시면 hours=-5 로 바꾸면 끝! 으흐흐
 target_time = datetime.now(timezone.utc) + timedelta(hours=+9)
@@ -282,6 +293,7 @@ country_codes = {
     'United Arab Emirates': 'ae', 'Albania': 'al', 'Georgia': 'ge',
     'Armenia': 'am', 'Nigeria': 'ng', 'Cuba': 'cu'
 }
+
 
 
 # 1. 맨 위에 자원 보너스 딕셔너리 추가
@@ -898,13 +910,14 @@ for _, row in df.iterrows():
             war_type = str(row.get('war_type', 'unknown'))
             
             # 🌟 [추가] 에픽 판정기: 모든 디비전 중 하나라도 1(True)이면 에픽!
+            # 1이면 fulls epic이고 2면 진짜 에픽
             # row.get(컬럼명, 기본값)을 써서 혹시나 데이터가 없어도 에러 안 나게 방어!
             is_epic = any([
-                row.get('epic_1', 0) == 1, 
-                row.get('epic_2', 0) == 1, 
-                row.get('epic_3', 0) == 1, 
-                row.get('epic_4', 0) == 1, 
-                row.get('epic_air', 0) == 1
+                row.get('epic_1', 0) == 2, 
+                row.get('epic_2', 0) == 2, 
+                row.get('epic_3', 0) == 2, 
+                row.get('epic_4', 0) == 2, 
+                row.get('epic_air', 0) == 2
             ])
 
             # 2. 아이콘 및 컬러 결정 (에픽을 최우선으로!)
@@ -964,10 +977,40 @@ for _, row in df.iterrows():
                 res_label = '<div style="color: #e67e22; font-weight: bold; font-size: 15px; margin-top: -5px;"> ✈️ Airstrike </div>'
 
 
+            # ... (루프 내부)
+            # 진행 중인 디비전이 하나라도 있다면(즉, end_t 중 하나라도 NaN이면) 타이머를 작동시킵니다.
+            end_fields = [row['end_t_1'], row['end_t_2'], row['end_t_3'], row['end_t_4'], row['end_t_air']]
+            is_ongoing = any(pd.isna(v) or str(v).lower() == 'nan' or float(v or 0) == 0 for v in end_fields)
+
+            if is_ongoing:
+                diff_seconds = int(time.time()) - int(row['battle_start'])
+                if diff_seconds < 0:
+                    # 🚩 1분 30초 전이면? diff_seconds는 -90.
+                    # 이걸 양수로 바꿔서 분/초를 계산한 뒤 앞에 '-'만 붙이면 끝!
+                    abs_diff = abs(diff_seconds)
+                    r_mins = abs_diff // 60
+                    r_secs = abs_diff % 60
+                    time_display_str = f"🕒 -{r_mins}:{r_secs:02d}"
+                else:
+                    # 진행 중인 전투 (양수)
+                    b_hrs = diff_seconds // 3600
+                    b_mins = (diff_seconds % 3600) // 60
+                    time_display_str = f"🕒 {b_hrs}:{b_mins:02d}"
+            else:
+                time_display_str = "🏁 CONCLUDED" # 모든 디비전이 종료된 경우
+
+
+
             # 1. 디비전별 막대 HTML을 미리 생성하는 함수 (코드가 길어지니 함수로 빼두면 편합니다!)
-            def create_div_bar(div_num, score, is_epic):
-                
-                epic_mark = "🔥" if is_epic == 1 else ""
+            def create_div_bar(div_num, score, is_epic, end_t):         
+                epic_mark = "🔥🔥" if is_epic == 2 else ("🔥" if is_epic == 1 else "")
+            
+            # 🚩 전술 수정: end_t가 비어있지 않고 'nan'이 아니면 무조건 체크!
+                end_val = str(end_t).lower()
+                is_finished = end_val != "" and end_val != "nan" and end_val != "none"
+                finish_icon = " ✅" if is_finished else ""
+
+
                 label = f"D{div_num}" if div_num != 11 else "AIR"
                 atk_score = score
                 def_score = 100 - score
@@ -976,7 +1019,7 @@ for _, row in df.iterrows():
                 <div style="margin-bottom: 6px;">
                     <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: bold; margin-bottom: 2px; font-family: 'Arial';">
                         <span style="color: #e74c3c;">{atk_score:.1f}%</span>
-                        <span>{epic_mark} {label}</span>
+                        <span>{epic_mark} {label}{finish_icon}</span>
                         <span style="color: #2980b9;">{def_score:.1f}%</span>
                     </div>
                     <div style="display: flex; width: 100%; height: 12px; border-radius: 6px; overflow: hidden; background: #eee;">
@@ -994,7 +1037,7 @@ for _, row in df.iterrows():
             # 팝업 HTML에서 동맹군 부분을 빼버린 핵심 구조
             popup_html = f"""
                 <div style="
-                    width: 250px; 
+                    width: 300px; 
                     margin: 0 auto;             /* 🌟 좌우 마진 자동 (정중앙 정렬 핵심) */
                     font-family: 'Arial'; 
                     padding: 10px; 
@@ -1020,9 +1063,22 @@ for _, row in df.iterrows():
                         </div>
                     </div>
 
-                    <div style="flex: 1; background: #f8f9fa; padding: 6px; border-radius: 6px; border: 1px solid #eee;">
-                        {"".join([create_div_bar(i, row[f'div_{i}'], row[f'epic_{i}']) for i in [1,2,3,4]])}
-                        {create_div_bar(11, row['div_air'], row['epic_air'])}
+                <div style="
+                    background: #f8f9fa; 
+                    padding: 10px; 
+                    border-radius: 6px; 
+                    border: 1px solid #eee;
+                    margin-bottom: 8px;
+                /* 🚩 핵심: 좌우로 삐져나가게 만들기 */
+                    width: 105%;           /* 부모보다 더 넓게! */
+                    margin-left:    /* 중앙 정렬을 위해 왼쪽으로 살짝 당기기 */
+                    box-sizing: border-box; /* 패딩이 너비를 잡아먹지 않게 고정 */
+                    ">
+                    <div style="text-align: center; font-size: 12px; font-weight: 900; color: #555; margin-bottom: 8px; border-bottom: 1.5px solid #eee; padding-bottom: 4px; letter-spacing: 1px;">
+                              ROUND {int(row['zone_id'])}  {time_display_str}
+                    </div>
+                        {"".join([create_div_bar(i, row[f'div_{i}'], row[f'epic_{i}'], row[f'end_t_{i}']) for i in [1,2,3,4]])}
+                        {create_div_bar(11, row['div_air'], row['epic_air'], row['end_t_air'])}
                     </div>
 
                     <div style="width: 75px; text-align: center;">
@@ -1049,7 +1105,7 @@ for _, row in df.iterrows():
             folium.Marker(
                 location=[row['lat'], row['lon']],
                 icon=folium.DivIcon(html=icon_style),
-                popup=folium.Popup(popup_html, max_width=280),
+                popup=folium.Popup(popup_html, max_width=320),
                 z_index=1000
                 
             ).add_to(battle_layer)
